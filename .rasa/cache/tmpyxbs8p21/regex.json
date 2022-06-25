@@ -1,0 +1,18 @@
+[
+  {
+    "name": "province",
+    "pattern": "(\\bQuang\\ Ninh\\b|\\bHà\\ Nội\\b)"
+  },
+  {
+    "name": "citadel",
+    "pattern": "(\\bCo\\ Loa\\b)"
+  },
+  {
+    "name": "property",
+    "pattern": "(\\blễ\\ hội\\b)"
+  },
+  {
+    "name": "time",
+    "pattern": "(\\btháng\\ 2\\ Âm\\ lịch\\b)"
+  }
+]

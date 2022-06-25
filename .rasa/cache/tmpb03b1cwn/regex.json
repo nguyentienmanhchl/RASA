@@ -1,0 +1,14 @@
+[
+  {
+    "name": "X",
+    "pattern": "(\\blễ\\ hội\\b)"
+  },
+  {
+    "name": "object",
+    "pattern": "(\\bQuảng\\ Ninh\\b|\\bHà\\ Nội\\b|\\btháng\\ 2\\ Âm\\ lịch\\b)"
+  },
+  {
+    "name": "citadel",
+    "pattern": "(\\bCo\\ Loa\\b)"
+  }
+]

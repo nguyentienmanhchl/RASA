@@ -1,0 +1,20 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-citadel",
+      "2": "I-citadel",
+      "3": "L-citadel",
+      "4": "U-citadel",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-citadel": 1,
+      "I-citadel": 2,
+      "L-citadel": 3,
+      "U-citadel": 4,
+      "O": 0
+    },
+    "num_tags": 5
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "name": "province",
+    "pattern": "(\\bQuảng\\ Ninh\\b|\\bHà\\ Nội\\b)"
+  },
+  {
+    "name": "citadel",
+    "pattern": "(\\bCo\\ Loa\\b)"
+  }
+]

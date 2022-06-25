@@ -1,0 +1,18 @@
+[
+  {
+    "name": "X",
+    "pattern": "(\\blễ\\ hội\\b|\\bcon\\ người\\b|\\bdi\\ tích\\ lịch\\ sử\\ văn\\ hóa\\b|\\bđơn\\ vị\\ hành\\ chính\\b|\\bdi\\ tích\\ khảo\\ cổ\\b|\\bkiến\\ trúc\\ thành\\ quách\\b|\\bvua\\b)"
+  },
+  {
+    "name": "object",
+    "pattern": "(\\bQuảng\\ Ninh\\b|\\bHà\\ Nội\\b|\\btháng\\ 2\\ Âm\\ lịch\\b|\\bHuế\\b|\\bÁi\\ Châu\\b|\\bSơn\\ Tây\\b|\\bcuối\\ tháng\\ 3\\ Âm\\ lịch\\b|\\b3/2\\ Âm\\ lịch\\b|\\bquần\\ thể\\ di\\ tích\\ Cố\\ đô\\ Huế\\b|\\bThanh\\ Hóa\\b|\\b3000\\ năm\\b|\\bDương\\ Bình\\ Vương\\b|\\bNgoDynasty\\b|\\bYear\\ 939\\b|\\b830\\b|\\b1930\\-12\\-11\\b|\\b1910\\-07\\-10\\b|\\b1930\\-09\\-08\\b|\\b0907\\-07\\-23\\b|\\b1998\\-07\\-14\\b|\\b1996\\-12\\-24\\b|\\b2011\\-07\\-23\\b|\\btháng\\ 2\\ Âm\\ lịch\\b|\\bAn\\ Dương\\ Vương\\b|\\bnăm\\ 1805\\b|\\bKing\\ Ngô\\ Quyền\\b)"
+  },
+  {
+    "name": "predicate",
+    "pattern": "(\\bsinh\\ tại\\b|\\bbắt\\ đầu\\ vào\\b|\\bkết\\ thúc\\ vào\\b|\\bnằm\\ trong\\b|\\bcó\\ niên\\ đại\\b|\\bcó\\ người\\ kế\\ vị\\ là\\b|\\bở\\ thời\\ kỳ\\ là\\b|\\btrị\\ vì\\b|\\bsinh\\ vào\\b|\\bmất\\ vào\\b|\\bdiễn\\ ra\\ vào\\b|\\bđược\\ xây\\ dựng\\ bởi\\b|\\bđược\\ xây\\ dựng\\ vào\\b|\\blàm\\b|\\bđược\\ tổ\\ chức\\ tại\\b)"
+  },
+  {
+    "name": "citadel",
+    "pattern": "(\\bCo\\ Loa\\b)"
+  }
+]

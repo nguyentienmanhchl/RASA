@@ -1,0 +1,44 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-citadel",
+      "2": "I-citadel",
+      "3": "L-citadel",
+      "4": "U-citadel",
+      "5": "B-property",
+      "6": "I-property",
+      "7": "L-property",
+      "8": "U-property",
+      "9": "B-province",
+      "10": "I-province",
+      "11": "L-province",
+      "12": "U-province",
+      "13": "B-time",
+      "14": "I-time",
+      "15": "L-time",
+      "16": "U-time",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-citadel": 1,
+      "I-citadel": 2,
+      "L-citadel": 3,
+      "U-citadel": 4,
+      "B-property": 5,
+      "I-property": 6,
+      "L-property": 7,
+      "U-property": 8,
+      "B-province": 9,
+      "I-province": 10,
+      "L-province": 11,
+      "U-province": 12,
+      "B-time": 13,
+      "I-time": 14,
+      "L-time": 15,
+      "U-time": 16,
+      "O": 0
+    },
+    "num_tags": 17
+  }
+]
