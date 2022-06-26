@@ -9,7 +9,6 @@ intents:
 - thankyou
 - praise
 - decry
-- ask_for_lunch
 - ask_ability
 - ask_person
 - ask_person_2 
@@ -38,13 +37,13 @@ entities:
 responses:
   utter_greet:
   - text: |-
-      Em chào anh(chị) ạ. 
-      Em là chatbot được thiết kế để giúp anh chị quyết định 'trưa nay ăn gì?' ạ
+      Hello. 
+      Em là chatbot được thiết kế để hỏi đáp về du lịch.
   utter_goodbye:
   - image: https://i.imgur.com/nGF1K8f.jpg
     text: Hẹn gặp lại anh chị ạ ^^
   utter_happy:
-  - text: Hì hì, anh chị khen quá lơì rồi ạ
+  - text: Hì hì, anh chị khen quá lời rồi ạ
   utter_sorry:
   - text: Em xin lôĩ vì em chưa đủ thông minh ạ =(((
   utter_noworries:
@@ -63,7 +62,6 @@ actions:
 - utter_goodbye
 - utter_sorry
 - utter_noworries
-- action_recommend
 - utter_show_ability
 - utter_fallback
 - utter_iamabot

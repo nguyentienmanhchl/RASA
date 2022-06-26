@@ -133,16 +133,7 @@ nlu:
     - có thế mà cũng không biết
     - kém cói
 
-- intent: ask_for_lunch
-  examples: |
-    - trưa nay anh nên ăn gì nhỉ
-    - trưa nay ăn gì bây giờ nhỉ
-    - chọn giúp t bữa trưa phát
-    - ăn trưa nào
-    - tiểu nhị, chọn món
-    - bữa trưa
-    - ăn gì bây giờ
-    - chọn giúp anh một quán ăn
+
 
 
 - intent: ask_person

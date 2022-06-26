@@ -8,10 +8,10 @@ stories:
   - action: utter_greet
   - intent: mood_great
   - action: utter_happy
-- story: happy path 2
-  steps:
-  - intent: ask_for_lunch
-  - action: action_recommend
+# - story: happy path 2
+#   steps:
+#   - intent: ask_for_lunch
+#   - action: action_recommend
 
 
 
