@@ -145,7 +145,7 @@ class ActionOneCondition(Action):
        
 
         input_data = input_data1 + "~"+ input_data2 +"~"+input_data3
-        r = requests.get("http://127.0.0.1:8080/one_condition",data=input_data.encode('utf-8'))
+        r = requests.get("http://localhost:8080/one_condition",data=input_data.encode('utf-8'))
        
         print(input_data)
         dispatcher.utter_message(
