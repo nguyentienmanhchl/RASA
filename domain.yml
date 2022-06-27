@@ -49,7 +49,7 @@ responses:
   utter_noworries:
   - text: Em luôn sẵn lòng giúp đỡ anh(chị) bất cứ lúc nào ạ ^^
   utter_show_ability:
-  - text: Em có thể trò chuyện với anh(chị), thi thoảng có thể đề xuất anh(chị) nên ăn gì trưa nay ạ
+  - text: Em có thể trò chuyện về du lịch.
   utter_fallback:
   - text: Em xin lỗi, em chưa hiểu ý muốn của anh(chị) ạ. Anh chị có thể nói lại được không ạ
   utter_iamabot:
