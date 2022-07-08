@@ -89,4 +89,74 @@ rules:
   - intent: nlu_fallback
   - action: utter_please_rephrase
 
+- rule: ask_den_chua
+  steps:
+  - intent: ask_den_chua
+  - action: action_ask_den_chua
 
+- rule: ask_about_den_chua
+  steps: 
+  - intent: ask_about_den_chua
+  - action: action_ask_about_area
+
+- rule: ask_natural_area
+  steps:
+  - intent: ask_natural_area
+  - action: action_ask_area
+
+- rule: ask_about_natural_area
+  steps:
+  - intent: ask_about_natural_area
+  - action: action_ask_about_area
+
+- rule: all
+  steps:
+  - intent: all
+  - action: action_all
+
+- rule: relate
+  steps:
+  - intent: relate
+  - action: action_ask_relate
+
+- rule: diem_du_lich
+  steps:
+  - intent: diem_du_lich
+  - action: action_ask_area
+
+
+
+
+- rule: hoi_an
+  steps:
+  - intent: hoi_an
+  - action: utter_hoi_an
+- rule: mua_he
+  steps:
+  - intent: mua_he
+  - action: utter_mua_he
+
+- rule: vua_bay_tuoi
+  steps:
+  - intent: vua_bay_tuoi
+  - action: utter_vua_bay_tuoi  
+
+- rule: quan_than
+  steps:
+  - intent: quan_than
+  - action: utter_quan_than
+
+- rule: chua_mot_cot
+  steps:
+  - intent: chua_mot_cot
+  - action: utter_chua_mot_cot
+
+- rule: bai_bien
+  steps:
+  - intent: bai_bien
+  - action: utter_bai_bien
+
+- rule: tam_linh
+  steps:
+  - intent: tam_linh
+  - action: utter_tam_linh

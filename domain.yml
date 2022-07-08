@@ -25,23 +25,79 @@ intents:
 - ask_about_cultural_historical_site  
 - ask_about_festival
 - ask_about_person
+- ask_den_chua
+- ask_about_den_chua
+- ask_natural_area
+- ask_about_natural_area
+- hoi_an
+- mua_he
+- vua_bay_tuoi
+- quan_than
+- chua_mot_cot
+- bai_bien
+- tam_linh
+- all
+- diem_du_lich
+- relate
 
 entities:
 - object
 - X
-- citadel
 - predicate
 - number
 - time
 
 responses:
+  utter_hoi_an:
+  - text: |-
+      Hội An mang vẻ đẹp bình lặng và cổ kính. Sức hấp dẫn của đô thị hơn 400 năm tuổi xuất phát từ những kiến trúc cổ, những nhà mái ngói rêu phong, những con phố đèn lồng đầy màu sắc,...
+      Ngoài ra, Hội An cũng nổi tiếng với những lễ hội truyền thống đặc sắc như: lễ hội thành hoàng làng, lễ tưởng niệm các tổ sư ngành nghề, lễ kỷ niệm các bậc thánh nhân tôn giáo,... và các trò chơi dân gian như hò khoan, hò giã gạo, bài chòi,... 
+  utter_mua_he:
+  - text: |-
+      Phú Quốc - thiên đường của nắng và gió, 
+      Nha Trang - thành phố biển xinh đẹp,
+      Đảo Bình Ba, Khánh Hòa,
+      Sapa - tiếng gọi của đồng xanh lộng gió, 
+      Mộc Châu - điểm đến của các phượt thủ,
+      Hà Giang - hơi thở đất trời,
+      Du lịch Huế - Đà Nẵng - Hội An
+  utter_vua_bay_tuoi:
+  - text: Đó là Lý Nhân Tông
+  utter_quan_than:
+  - text: |-
+      Trần Thủ Độ,
+      Trần Quốc Tuấn (Trần Hưng Đạo),
+      Trần Khánh Dư,
+      Trần Quốc Toản,
+      Phạm Ngũ Lão
+  utter_chua_mot_cot:
+  - text: Theo truyền thuyết dân gian, trong một giấc mơ vua Lý Thái Tông đã mơ thấy Phật Bà Quan Âm tọa trên đài sen, sau đó Phật Bà mời nhà vua lên cùng.
+  utter_bai_bien:
+  - text: |-
+      Bãi Sao - Phú Quốc, Kiên Giang,
+      Mũi Né - Bình Thuận,
+      Nha Trang - Khánh Hòa,
+      Mỹ Khê - Đà Nẵng,
+      Cửa Đại - Hội An, Quảng Nam,
+      Hồ Cốc - Bà Rịa Vũng Tàu,
+      Côn Đảo - Bà Rịa Vũng Tàu,
+      Hạ Long - Quảng Ninh
+  utter_tam_linh:
+  - text: |-
+      Chùa Hương (Hà Nội),
+      Đền Trần (Nam Định),
+      Phủ Tây Hồ (Hà Nội),
+      Chùa Yên Tử (Quảng Ninh),
+      Chùa Bái Đính (Ninh Bình),
+      Đền Bắc Lệ (Lạng Sơn), 
+      Chùa Hà (Hà Nội), 
+      Văn Miếu - Quốc Tử Giám (Hà Nội)
   utter_greet:
   - text: |-
       Hello. 
       Em là chatbot được thiết kế để hỏi đáp về du lịch.
   utter_goodbye:
-  - image: https://i.imgur.com/nGF1K8f.jpg
-    text: Hẹn gặp lại anh chị ạ ^^
+  - text: Hẹn gặp lại anh chị ạ ^^
   utter_happy:
   - text: Hì hì, anh chị khen quá lời rồi ạ
   utter_sorry:
@@ -65,6 +121,18 @@ actions:
 - utter_show_ability
 - utter_fallback
 - utter_iamabot
+- utter_hoi_an
+- utter_mua_he
+- utter_vua_bay_tuoi
+- utter_quan_than
+- utter_chua_mot_cot
+- utter_bai_bien
+- utter_tam_linh
 - action_one_condition
 - action_two_conditions
 - action_ask_one_property
+- action_ask_den_chua
+- action_ask_about_area
+- action_ask_relate
+- action_ask_area
+- action_all
