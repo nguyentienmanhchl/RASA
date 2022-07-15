@@ -96,6 +96,7 @@ nlu:
     - Đồng Nai
     - Hải Dương
     - Đắk Lắk
+    - Núi Bài Thơ
 
     
 
@@ -260,6 +261,20 @@ nlu:
     - [Đồng Nai]{"entity":"object"} có lễ hội gì?
     - [Hải Dương]{"entity":"object"} có lễ hội gì?
     - [Đắk Lắk]{"entity":"object"} có lễ hội gì?
+    - lễ hội dân gian nào diễn ra vào [18-21/1 âm lịch]{"entity":"object"}?
+    - lễ hội dân gian nào diễn ra vào [10 tháng 10 âm lịch]{"entity":"object"}?
+    - lễ hội  nào diễn ra vào [9 tháng 11]{"entity":"object"}?    
+    - lễ hội tri ân [Thánh Gióng]{"entity":"object"}?
+    - lễ hội kỷ niệm về [Nguyễn Huệ]{"entity":"object"}?
+    - lễ hội kỉ niệm [Lý Thường Kiệt]{"entity":"object"}?
+    - lễ hội tưởng nhớ [Tô Hiến Thành]{"entity":"object"}?
+    - lễ hội tưởng nhớ [Thái Luân]{"entity":"object"}?
+    - lễ hội về [Phùng Hưng]{"entity":"object"}?
+    - lễ hội tưởng nhớ [Lê Hoàn]{"entity":"object"}?
+    - lễ hội về [Nguyễn Siêu]{"entity":"object"}?
+    - lễ hội tưởng nhớ [Trần Nguyễn Trác]{"entity":"object"}?
+
+
 
 
 
@@ -412,6 +427,18 @@ nlu:
     - [Tết Trùng Cửu]{"entity":"object"} diễn ra vào ?
     - [Hội Đình Mai]{"entity":"object"} diễn ra vào ?
     - [Lễ hội Đống Đa]{"entity":"object"} diễn ra vào ?
+    - [Hội đền Xuân Lai]{"entity":"object"} diễn ra vào?
+    - [Lễ hội Đống Đa]{"entity":"object"} tri ân?
+    - [Hội Gióng đền Sóc]{"entity":"object"} tưởng nhớ?
+    - [Lễ hội Cổ Loa]{"entity":"object"} kỷ niệm?
+    - [Hội đình Thượng Lão]{"entity":"object"} kỉ niệm?
+    - [Hội Sơn Thanh]{"entity":"object"} diễn ra vào?
+    - [Hội đình Kim Mã Hạ]{"entity":"object"} tổ chức tại?
+    - [Hội chợ Chuông]{"entity":"object"} tri ân?
+    - [Lễ hội làng Triều Khúc]{"entity":"object"} tổ chức tại?
+    - [Hội làng Tó]{"entity":"object"} tưởng nhớ?
+    - [Lễ hội đình Đông Phù]{"entity":"object"} kỷ niệm?
+    - [Lễ hội làng Bắc Biên]{"entity":"object"} kỉ niệm?
 
 - intent: ask_about_natural_area
   examples: |
@@ -461,7 +488,27 @@ nlu:
     - [Hồ Chí Minh]{"entity":"object"}  mất vào ?
     - [Võ Chí Công]{"entity":"object"}  mất vào ?
     - [Trần Nhân Tông]{"entity":"object"}  có người kế vị là ?
-    - [Trần Nhân Tông]{"entity":"object"} có [an nghỉ]{"entity":"predicate"} là?
+    - [Trần Nhân Tông]{"entity":"object"} có nơi [an nghỉ]{"entity":"predicate"} là?
+    - [Thánh Gióng]{"entity":"object"} có liên quan đến ?
+    - [Quang Trung]{"entity":"object"} tham gia?
+    - [Lý Nam Đế]{"entity":"object"} là ai?
+    - [Tô Hiến Thành]{"entity":"object"} sinh vào?
+    - [Thái Luân]{"entity":"object"} sinh tại?
+    - [Phùng Hưng]{"entity":"object"} có người kế vị là?
+    - [Lê Hoàn]{"entity":"object"} có vợ là ?
+    - [Nguyễn Siêu]{"entity":"object"} có con là?
+    - [Trần Nguyễn Trác]{"entity":"object"} có cha là?
+    - [Lý Châu Nương]{"entity":"object"} có mẹ là?
+    - [Lý Thường Kiệt]{"entity":"object"} sinh tại?
+    - [Nguyên Phi Ỷ Lan]{"entity":"object"} có cha mẹ là?
+    - [Thánh Gióng]{"entity":"object"}
+    - [Nguyên Phi Ỷ Lan]{"entity":"object"}
+    - tướng quân [Nguyễn Siêu]{"entity":"object"}
+
+
+
+
+
 
 
 - intent: ask_den_chua

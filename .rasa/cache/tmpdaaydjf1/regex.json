@@ -1,0 +1,14 @@
+[
+  {
+    "name": "X",
+    "pattern": "(\\blễ\\ hội\\b|\\bcon\\ người\\b|\\bdi\\ tích\\ lịch\\ sử\\ văn\\ hóa\\b|\\bđơn\\ vị\\ hành\\ chính\\b|\\bdi\\ tích\\ khảo\\ cổ\\b|\\bkiến\\ trúc\\ thành\\ quách\\b|\\bvua\\b)"
+  },
+  {
+    "name": "object",
+    "pattern": "(\\bNinh\\ Bình\\b|\\bHồ\\ Chí\\ Minh\\b|\\bYên\\ Tử\\b|\\bHà\\ Giang\\b|\\bHồ\\ Gươm\\b|\\bHồ\\ Tây\\b|\\bQuảng\\ Ninh\\b|\\bHà\\ Nội\\b|\\btháng\\ 2\\ Âm\\ lịch\\b|\\bcuối\\ tháng\\ 3\\ Âm\\ lịch\\b|\\b3/2\\ Âm\\ lịch\\b|\\bquần\\ thể\\ di\\ tích\\ Cố\\ đô\\ Huế\\b|\\bThanh\\ Hóa\\b|\\b3000\\ năm\\b|\\bDương\\ Bình\\ Vương\\b|\\btháng\\ 2\\ Âm\\ lịch\\b|\\bAn\\ Dương\\ Vương\\b|\\bnăm\\ 1805\\b|\\bÁi\\ Châu\\b|\\bĐàn\\ đá\\ Bình\\ Đa\\b|\\bKinh\\ thành\\ Huế\\b|\\bĐiện\\ Long\\ An\\b|\\bLễ\\ hội\\ Bạch\\ Đằng\\b|\\bLễ\\ hội\\ đền\\ Đức\\ Ông\\b|\\bNgô\\ Quyền\\b|\\bTrần\\ Anh\\ Tông\\b|\\bHội\\ Tịch\\ Điền\\b|\\bGiỗ\\ Tổ\\ Hùng\\ Vương\\b|\\bLễ\\ hội\\ Đền\\ Hùng\\b|\\bTrưng\\ Nhị\\b|\\bTrưng\\ Trắc\\b|\\bBà\\ Triệu\\b|\\bPhùng\\ Hưng\\b|\\bKhúc\\ Thừa\\ Dụ\\b|\\bDương\\ Đình\\ Nghệ\\b|\\bĐinh\\ Tiên\\ Hoàng\\b|\\bLê\\ Đại\\ Hành\\b|\\bLý\\ Thánh\\ Tông\\b|\\bLý\\ Nhân\\ Tông\\b|\\bLý\\ Thần\\ Tông\\b|\\bLý\\ Anh\\ Tông\\b|\\bLý\\ Cao\\ Tông\\b|\\bTrần\\ Thủ\\ Độ\\b|\\bTrần\\ Thái\\ Tông\\b|\\bTrần\\ Hưng\\ Đạo\\b|\\bTrần\\ Thánh\\ Tông\\b|\\bTrần\\ Quốc\\ Tảng\\b|\\bPhạm\\ Ngũ\\ Lão\\b|\\bTrần\\ Quốc\\ Toản\\b|\\bChu\\ Văn\\ An\\b|\\bTrần\\ Minh\\ Tông\\b|\\bTrần\\ Hiến\\ Tông\\b|\\bTrần\\ Nghệ\\ Tông\\b|\\bHồ\\ Quý\\ Ly\\b|\\bTrần\\ Duệ\\ Tông\\b|\\bLê\\ Thái\\ Tổ\\b|\\bLê\\ Thái\\ Tông\\b|\\bLê\\ Thánh\\ Tông\\b|\\bNguyễn\\ Nhạc\\b|\\bNguyễn\\ Huệ\\b|\\bBùi\\ Thị\\ Xuân\\b|\\bNguyễn\\ Du\\b|\\bLễ\\ hội\\ đình\\ Đông\\ Phù\\b|\\bLễ\\ hội\\ Bà\\ Chúa\\ Xứ\\ Núi\\ Sam\\b|\\bLễ\\ hội\\ chùa\\ Bái\\ Đính\\b|\\bLễ\\ hội\\ Chùa\\ Yên\\ Tử\\b|\\bLễ\\ hội\\ chùa\\ Dâu\\b|\\bĐức\\ Lăng\\b|\\bHưng\\ Yên\\b|\\bNam\\ Bộ\\b|\\bYên\\ Bái\\b|\\bThành\\ phố\\ Hồ\\ Chí\\ Minh\\b|\\bHải\\ Dương\\b|\\bKiên\\ Giang\\b|\\bThái\\ Bình\\b|\\bHải\\ Dương\\b|\\bHải\\ Phòng\\b|\\bBình\\ Phước\\b|\\bPhú\\ Quốc\\b|\\bNinh\\ Bình\\b|\\bHạ\\ Long\\b|\\bĐồng\\ Nai\\b|\\bHải\\ Dương\\b|\\bĐắk\\ Lắk\\b)"
+  },
+  {
+    "name": "predicate",
+    "pattern": "(\\bsinh\\ tại\\b|\\bbắt\\ đầu\\ vào\\b|\\bkết\\ thúc\\ vào\\b|\\bnằm\\ trong\\b|\\bcó\\ niên\\ đại\\b|\\bcó\\ người\\ kế\\ vị\\ là\\b|\\bở\\ thời\\ kỳ\\ là\\b|\\btrị\\ vì\\b|\\bsinh\\ vào\\b|\\bmất\\ vào\\b|\\bdiễn\\ ra\\ vào\\b|\\bđược\\ xây\\ dựng\\ bởi\\b|\\bđược\\ xây\\ dựng\\ vào\\b|\\bgiữ\\ chức\\ vụ\\b|\\bđược\\ tổ\\ chức\\b|\\btri\\ ân\\b|\\bkỷ\\ niệm\\b|\\btưởng\\ nhớ\\b|\\bliên\\ quan\\b|\\ban\\ nghỉ\\b)"
+  }
+]
