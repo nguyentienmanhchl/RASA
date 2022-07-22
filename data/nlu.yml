@@ -376,7 +376,8 @@ nlu:
     - [Hội Tịch Điền]{"entity":"object"} trở thành ngày [kỷ niệm]{"entity":"predicate"} vị vua nào xuống đồng đi cày?
     - [Hội Tịch Điền]{"entity":"object"} [kỷ niệm]{"entity":"predicate"}?
     - [Giỗ Tổ Hùng Vương]{"entity":"object"} [diễn ra]{"entity":"predicate"} vào ngày nào?
-    - [Lễ hội Đền Hùng]{"entity":"object"} được tổ chức ở đâu?
+    - [Lễ hội Đền Hùng]{"entity":"object","value":"Lễ_hội_Đền_Hùng"} được tổ chức ở đâu?
+    - [Lễ Hội Đền Hùng]{"entity":"object","value":"Lễ_hội_Đền_Hùng"} được tổ chức ở đâu?
     - [Lễ hội Làng Vai]{"entity":"object"} được tổ chức ?
     - [Hội làng Bồ Đề]{"entity":"object"} được tổ chức ?
     - [Hội làng chài Vạn Vĩ]{"entity":"object"} được tổ chức ?
