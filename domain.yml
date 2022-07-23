@@ -42,7 +42,7 @@ intents:
 
 entities:
 - object
-- X
+- class
 - predicate
 - number
 - time

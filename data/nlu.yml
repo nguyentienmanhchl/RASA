@@ -1,7 +1,7 @@
 version: "3.1"
 
 nlu:
-- lookup: X
+- lookup: class
   examples: |
     - lễ hội
     - con người
@@ -12,7 +12,6 @@ nlu:
     - vua
 - lookup: object
   examples: |
-    - Ninh Bình
     - Hồ Chí Minh
     - Yên Tử
     - Hà Giang
@@ -122,6 +121,8 @@ nlu:
     - tưởng nhớ
     - liên quan
     - an nghỉ
+    - cha
+    - mẹ
 
 
 - intent: mood_great
@@ -192,38 +193,38 @@ nlu:
 
 - intent: ask_person
   examples: |
-    - [con người]{"entity":"X"} nào [mất vào]{"entity":"predicate"} [23-7-907]{"entity":"object"}?
-    - [con người]{"entity":"X"} nào [sinh vào]{"entity":"predicate"} [830]{"entity":"object"}?
-    - [con người]{"entity":"X"} nào [ở thời kỳ là]{"entity":"predicate"} [NgoDynasty]{"entity":"object"}?
-    - [con người]{"entity":"X"} nào [giữ chức vụ]{"entity":"predicate"} [King Ngô Quyền]{"entity":"object"}?
-    - [con người]{"entity":"X"} nào [có người kế vị là]{"entity":"predicate"} [Dương Bình Vương]{"entity":"object"}?
-    - [con người]{"entity":"X"} nào [sinh tại]{"entity":"predicate"} [Huế]{"entity":"object"}?
-    - con người [an nghỉ]{"entity":"predicate"} [Đức Lăng]{"entity":"object"}?
+    - [con người]{"entity":"class"} nào [mất vào]{"entity":"predicate","value":"mất vào"} [23-7-907]{"entity":"object"}?
+    - [con người]{"entity":"class"} nào [sinh vào]{"entity":"predicate","value":"sinh vào"} [830]{"entity":"object"}?
+    - [con người]{"entity":"class"} nào [ở thời kỳ là]{"entity":"predicate","value":"ở thời kỳ là"} [NgoDynasty]{"entity":"object"}?
+    - [con người]{"entity":"class"} nào [giữ chức vụ]{"entity":"predicate","value":"giữ chức vụ"} [King Ngô Quyền]{"entity":"object"}?
+    - [con người]{"entity":"class"} nào [có người kế vị là]{"entity":"predicate","value":"có người kế vị là"} [Dương Bình Vương]{"entity":"object","value":"vntourism:Dương_Bình_Vương"}?
+    - [con người]{"entity":"class"} nào [sinh tại]{"entity":"predicate","value":"sinh tại"} [Huế]{"entity":"object"}?
+    - con người [an nghỉ]{"entity":"predicate","value":"an nghỉ"} [Đức Lăng]{"entity":"object"}?
 
 
 - intent: ask_person_2
   examples: |
-    - [con người]{"entity":"X"} nào mất vào [23-7-907]{"entity":"object"} và sinh vào [830]{"entity":"object"} ?
-    - [con người]{"entity":"X"} nào sinh vào [830]{"entity":"object"} và mất vào [23-7-907]{"entity":"object"} ?
-    - [con người]{"entity":"X"} nào ở thời kỳ là [NgoDynasty]{"entity":"object"} và giữ chức vụ [King Ngô Quyền]{"entity":"object"} ?
-    - [con người]{"entity":"X"} nào ở thời kỳ là [NgoDynasty]{"entity":"object"} và có người kế vị là [Dương Bình Vương]{"entity":"object"} ?
-    - [con người]{"entity":"X"} nào giữ chức vụ [King Ngô Quyền]{"entity":"object"} và ở thời kỳ là [NgoDynasty]{"entity":"object"} ?
-    - [con người]{"entity":"X"} nào giữ chức vụ [King Ngô Quyền]{"entity":"object"} và có người kế vị là [Dương Bình Vương]{"entity":"object"} ?
-    - [con người]{"entity":"X"} nào có người kế vị là [Dương Bình Vương]{"entity":"object"} và ở thời kỳ là [NgoDynasty]{"entity":"object"} ?
-    - [con người]{"entity":"X"} nào có người kế vị là [Dương Bình Vương]{"entity":"object"} và giữ chức vụ [King Ngô Quyền]{"entity":"object"} ?
+    - [con người]{"entity":"class"} nào mất vào [23-7-907]{"entity":"object"} và sinh vào [830]{"entity":"object"} ?
+    - [con người]{"entity":"class"} nào sinh vào [830]{"entity":"object"} và mất vào [23-7-907]{"entity":"object"} ?
+    - [con người]{"entity":"class"} nào ở thời kỳ là [NgoDynasty]{"entity":"object"} và giữ chức vụ [King Ngô Quyền]{"entity":"object"} ?
+    - [con người]{"entity":"class"} nào ở thời kỳ là [NgoDynasty]{"entity":"object"} và có người kế vị là [Dương Bình Vương]{"entity":"object","value":"vntourism:Dương_Bình_Vương"} ?
+    - [con người]{"entity":"class"} nào giữ chức vụ [King Ngô Quyền]{"entity":"object"} và ở thời kỳ là [NgoDynasty]{"entity":"object"} ?
+    - [con người]{"entity":"class"} nào giữ chức vụ [King Ngô Quyền]{"entity":"object"} và có người kế vị là [Dương Bình Vương]{"entity":"object","value":"vntourism:Dương_Bình_Vương"} ?
+    - [con người]{"entity":"class"} nào có người kế vị là [Dương Bình Vương]{"entity":"object","value":"vntourism:Dương_Bình_Vương"} và ở thời kỳ là [NgoDynasty]{"entity":"object"} ?
+    - [con người]{"entity":"class"} nào có người kế vị là [Dương Bình Vương]{"entity":"object","value":"vntourism:Dương_Bình_Vương"} và giữ chức vụ [King Ngô Quyền]{"entity":"object"} ?
 
 
 - intent: ask_festival
   examples: |
-    - [lễ hội]{"entity":"X"} nào [được tổ chức]{"entity":"predicate"} tại [Quảng Ninh]{"entity":"object"}?
-    - lễ hội nào [diễn ra vào]{"entity":"predicate"} [tháng 2 Âm lịch]{"entity":"object"}?
-    - lễ hội nào [bắt đầu vào]{"entity":"predicate"} [3/2 Âm lịch]{"entity":"object"}?
-    - [lễ hội]{"entity":"X"} nào [kết thúc vào]{"entity":"predicate"} [cuối tháng 3 Âm lịch]{"entity":"object"}?
-    - [lễ hội]{"entity":"X"} nào được tổ chức [Quảng Ninh]{"entity":"object"}?
-    - lễ hội nào [tri ân]{"entity":"predicate"} [Trần Quốc Tảng]{"entity":"object"}?
-    - lễ hội nào [tưởng nhớ]{"entity":"predicate"} [Trần Quốc Tảng]{"entity":"object"}?
-    - lễ hội nào [kỷ niệm]{"entity":"predicate"} [Trần Quốc Tảng]{"entity":"object"}?
-    - lễ hội [tri ân]{"entity":"predicate"} công lao [Trần Hưng Đạo]{"entity":"object"}?
+    - [lễ hội]{"entity":"class","value":"lễ hội"} nào [được tổ chức]{"entity":"predicate","value":"được tổ chức"} tại [Quảng Ninh]{"entity":"object","value":"Quảng Ninh"}?
+    - lễ hội nào [diễn ra vào]{"entity":"predicate","value":"diễn ra vào"} [tháng 2 Âm lịch]{"entity":"object"}?
+    - lễ hội nào [bắt đầu vào]{"entity":"predicate","value":"bắt đầu vào"} [3/2 Âm lịch]{"entity":"object"}?
+    - [lễ hội]{"entity":"class","value":"lễ hội"} nào [kết thúc vào]{"entity":"predicate","value":"kết thúc vào"} [cuối tháng 3 Âm lịch]{"entity":"object"}?
+    - [lễ hội]{"entity":"class","value":"lễ hội"} nào được tổ chức [Quảng Ninh]{"entity":"object"}?
+    - lễ hội nào [tri ân]{"entity":"predicate","value":"tri ân"} [Trần Quốc Tảng]{"entity":"object","value":"vntourism:Trần_Quốc_Tảng"}?
+    - lễ hội nào [tưởng nhớ]{"entity":"predicate","value":"tưởng nhớ"} [Trần Quốc Tảng]{"entity":"object","value":"vntourism:Trần_Quốc_Tảng"}?
+    - lễ hội nào [kỷ niệm]{"entity":"predicate","value":"kỷ niệm"} [Trần Quốc Tảng]{"entity":"object","value":"vntourism:Trần_Quốc_Tảng"}?
+    - lễ hội [tri ân]{"entity":"predicate","value":"tri ân"} công lao [Trần Hưng Đạo]{"entity":"object","value":"vntourism:Trần_Hưng_Đạo"}?
     - lễ hội dân gian nào được tổ chức [Hải Phòng]{"entity":"object"}?
     - lễ hội dân gian nào được tổ chức [Tây Ninh]{"entity":"object"}?
     - lễ hội dân gian nào được tổ chức [Phú Quốc]{"entity":"object"}?
@@ -280,64 +281,64 @@ nlu:
 
 - intent: ask_festival_2
   examples: |
-    - [lễ hội]{"entity":"X"} nào diễn ra vào [tháng 2 Âm lịch]{"entity":"object"} và bắt đầu vào [3/2 Âm lịch]{"entity":"object"} ?
-    - [lễ hội]{"entity":"X"} nào diễn ra vào [tháng 2 Âm lịch]{"entity":"object"} và kết thúc vào [cuối tháng 3 Âm lịch]{"entity":"object"} ?
-    - [lễ hội]{"entity":"X"} nào bắt đầu vào [3/2 Âm lịch]{"entity":"object"} và diễn ra vào [tháng 2 Âm lịch]{"entity":"object"} ?
-    - [lễ hội]{"entity":"X"} nào bắt đầu vào [3/2 Âm lịch]{"entity":"object"} và kết thúc vào [cuối tháng 3 Âm lịch]{"entity":"object"} ?
-    - [lễ hội]{"entity":"X"} nào kết thúc vào [cuối tháng 3 Âm lịch]{"entity":"object"} và diễn ra vào [tháng 2 Âm lịch]{"entity":"object"} ?
-    - [lễ hội]{"entity":"X"} nào kết thúc vào [cuối tháng 3 Âm lịch]{"entity":"object"} và bắt đầu vào [3/2 Âm lịch]{"entity":"object"} ?
-    - [lễ hội]{"entity":"X"} nào kết thúc vào [cuối tháng 3 Âm lịch]{"entity":"object"} và được tổ chức tại [Quảng Ninh]{"entity":"object"} ?
-    - [lễ hội]{"entity":"X"} nào bắt đầu vào [3/2 Âm lịch]{"entity":"object"} và được tổ chức tại [Quảng Ninh]{"entity":"object"} ?
-    - [lễ hội]{"entity":"X"} nào diễn ra vào  [tháng 2 Âm lịch]{"entity":"object"} và được tổ chức tại [Quảng Ninh]{"entity":"object"} ?
-    - lễ hội nào tri ân [Trần Quốc Tảng]{"entity":"object"} và bắt đầu vào [3/2 Âm lịch]{"entity":"object"} ?
-    - lễ hội nào tri ân [Trần Quốc Tảng]{"entity":"object"} và kết thúc vào [cuối tháng 3 Âm lịch]{"entity":"object"} ?
-    - lễ hội nào tri ân [Trần Quốc Tảng]{"entity":"object"} và diễn ra vào [tháng 2 Âm lịch]{"entity":"object"} ?
-    - lễ hội nào tưởng nhớ [Trần Quốc Tảng]{"entity":"object"} và được tổ chức [Quảng Ninh]{"entity":"object"} ?
-    - lễ hội nào tưởng nhớ [Trần Quốc Tảng]{"entity":"object"} và tri ân [Trần Quốc Tảng]{"entity":"object"} ?
-    - lễ hội nào tưởng nhớ [Trần Quốc Tảng]{"entity":"object"} và kỷ niệm [Trần Quốc Tảng]{"entity":"object"} ?
-    - lễ hội nào tưởng nhớ [Trần Quốc Tảng]{"entity":"object"} và bắt đầu vào [3/2 Âm lịch]{"entity":"object"} ?
-    - lễ hội nào tưởng nhớ [Trần Quốc Tảng]{"entity":"object"} và kết thúc vào [cuối tháng 3 Âm lịch]{"entity":"object"} ?
-    - lễ hội nào tưởng nhớ [Trần Quốc Tảng]{"entity":"object"} và diễn ra vào [tháng 2 Âm lịch]{"entity":"object"} ?
-    - lễ hội nào kỷ niệm [Trần Quốc Tảng]{"entity":"object"} và được tổ chức [Quảng Ninh]{"entity":"object"} ?
-    - lễ hội nào kỷ niệm [Trần Quốc Tảng]{"entity":"object"} và tri ân [Trần Quốc Tảng]{"entity":"object"} ?
-    - lễ hội nào kỷ niệm [Trần Quốc Tảng]{"entity":"object"} và tưởng nhớ [Trần Quốc Tảng]{"entity":"object"} ?
-    - lễ hội nào kỷ niệm [Trần Quốc Tảng]{"entity":"object"} và bắt đầu vào [3/2 Âm lịch]{"entity":"object"} ?    
+    - [lễ hội]{"entity":"class","value":"lễ hội"} nào diễn ra vào [tháng 2 Âm lịch]{"entity":"object"} và bắt đầu vào [3/2 Âm lịch]{"entity":"object"} ?
+    - [lễ hội]{"entity":"class","value":"lễ hội"} nào diễn ra vào [tháng 2 Âm lịch]{"entity":"object"} và kết thúc vào [cuối tháng 3 Âm lịch]{"entity":"object"} ?
+    - [lễ hội]{"entity":"class","value":"lễ hội"} nào bắt đầu vào [3/2 Âm lịch]{"entity":"object"} và diễn ra vào [tháng 2 Âm lịch]{"entity":"object"} ?
+    - [lễ hội]{"entity":"class","value":"lễ hội"} nào bắt đầu vào [3/2 Âm lịch]{"entity":"object"} và kết thúc vào [cuối tháng 3 Âm lịch]{"entity":"object"} ?
+    - [lễ hội]{"entity":"class","value":"lễ hội"} nào kết thúc vào [cuối tháng 3 Âm lịch]{"entity":"object"} và diễn ra vào [tháng 2 Âm lịch]{"entity":"object"} ?
+    - [lễ hội]{"entity":"class","value":"lễ hội"} nào kết thúc vào [cuối tháng 3 Âm lịch]{"entity":"object"} và bắt đầu vào [3/2 Âm lịch]{"entity":"object"} ?
+    - [lễ hội]{"entity":"class","value":"lễ hội"} nào kết thúc vào [cuối tháng 3 Âm lịch]{"entity":"object"} và được tổ chức tại [Quảng Ninh]{"entity":"object"} ?
+    - [lễ hội]{"entity":"class","value":"lễ hội"} nào bắt đầu vào [3/2 Âm lịch]{"entity":"object"} và được tổ chức tại [Quảng Ninh]{"entity":"object"} ?
+    - [lễ hội]{"entity":"class","value":"lễ hội"} nào diễn ra vào  [tháng 2 Âm lịch]{"entity":"object"} và được tổ chức tại [Quảng Ninh]{"entity":"object"} ?
+    - lễ hội nào tri ân [Trần Quốc Tảng]{"entity":"object","value":"vntourism:Trần_Quốc_Tảng"} và bắt đầu vào [3/2 Âm lịch]{"entity":"object"} ?
+    - lễ hội nào tri ân [Trần Quốc Tảng]{"entity":"object","value":"vntourism:Trần_Quốc_Tảng"} và kết thúc vào [cuối tháng 3 Âm lịch]{"entity":"object"} ?
+    - lễ hội nào tri ân [Trần Quốc Tảng]{"entity":"object","value":"vntourism:Trần_Quốc_Tảng"} và diễn ra vào [tháng 2 Âm lịch]{"entity":"object"} ?
+    - lễ hội nào tưởng nhớ [Trần Quốc Tảng]{"entity":"object","value":"vntourism:Trần_Quốc_Tảng"} và được tổ chức [Quảng Ninh]{"entity":"object"} ?
+    - lễ hội nào tưởng nhớ [Trần Quốc Tảng]{"entity":"object","value":"vntourism:Trần_Quốc_Tảng"} và tri ân [Trần Quốc Tảng]{"entity":"object","value":"vntourism:Trần_Quốc_Tảng"} ?
+    - lễ hội nào tưởng nhớ [Trần Quốc Tảng]{"entity":"object","value":"vntourism:Trần_Quốc_Tảng"} và kỷ niệm [Trần Quốc Tảng]{"entity":"object","value":"vntourism:Trần_Quốc_Tảng"} ?
+    - lễ hội nào tưởng nhớ [Trần Quốc Tảng]{"entity":"object","value":"vntourism:Trần_Quốc_Tảng"} và bắt đầu vào [3/2 Âm lịch]{"entity":"object"} ?
+    - lễ hội nào tưởng nhớ [Trần Quốc Tảng]{"entity":"object","value":"vntourism:Trần_Quốc_Tảng"} và kết thúc vào [cuối tháng 3 Âm lịch]{"entity":"object"} ?
+    - lễ hội nào tưởng nhớ [Trần Quốc Tảng]{"entity":"object","value":"vntourism:Trần_Quốc_Tảng"} và diễn ra vào [tháng 2 Âm lịch]{"entity":"object"} ?
+    - lễ hội nào kỷ niệm [Trần Quốc Tảng]{"entity":"object","value":"vntourism:Trần_Quốc_Tảng"} và được tổ chức [Quảng Ninh]{"entity":"object"} ?
+    - lễ hội nào kỷ niệm [Trần Quốc Tảng]{"entity":"object","value":"vntourism:Trần_Quốc_Tảng"} và tri ân [Trần Quốc Tảng]{"entity":"object","value":"vntourism:Trần_Quốc_Tảng"} ?
+    - lễ hội nào kỷ niệm [Trần Quốc Tảng]{"entity":"object","value":"vntourism:Trần_Quốc_Tảng"} và tưởng nhớ [Trần Quốc Tảng]{"entity":"object","value":"vntourism:Trần_Quốc_Tảng"} ?
+    - lễ hội nào kỷ niệm [Trần Quốc Tảng]{"entity":"object","value":"vntourism:Trần_Quốc_Tảng"} và bắt đầu vào [3/2 Âm lịch]{"entity":"object"} ?    
 
 - intent: ask_administrative_division
   examples: |
-    - [đơn vị hành chính]{"entity":"X"} nào [nằm trong]{"entity":"predicate"} [Thanh Hóa]{"entity":"object"}?
-    - [đơn vị hành chính]{"entity":"X"} gì [nằm trong]{"entity":"predicate"} tỉnh [Thanh Hóa]{"entity":"object"}
+    - [đơn vị hành chính]{"entity":"class"} nào [nằm trong]{"entity":"predicate"} [Thanh Hóa]{"entity":"object"}?
+    - [đơn vị hành chính]{"entity":"class"} gì [nằm trong]{"entity":"predicate"} tỉnh [Thanh Hóa]{"entity":"object"}
 
 - intent: ask_archaeological_historical_site
   examples: |
-    - [di tích khảo cổ]{"entity":"X"} nào [có niên đại]{"entity":"predicate"} [3000 năm]{"entity":"object"}?
-    - Tìm [di tích khảo cổ]{"entity":"X"} [có niên đại]{"entity":"predicate"} [3000 năm]{"entity":"object"}?
+    - [di tích khảo cổ]{"entity":"class"} nào [có niên đại]{"entity":"predicate"} [3000 năm]{"entity":"object"}?
+    - Tìm [di tích khảo cổ]{"entity":"class"} [có niên đại]{"entity":"predicate"} [3000 năm]{"entity":"object"}?
 
 
 - intent: ask_citadel_architecture
   examples: |
-    - [kiến trúc thành quách]{"entity":"X"} nào [được xây dựng vào]{"entity":"predicate"} [năm 1805]{"entity":"object"}?
-    - [kiến trúc thành quách]{"entity":"X"} nào [ở thời kỳ là]{"entity":"predicate"} [NgoDynasty]{"entity":"object"}?
-    - [kiến trúc thành quách]{"entity":"X"} nào [được chọn làm thủ đô bởi]{"entity":"predicate"} [Ngô Quyền]{"entity":"object"}?
-    - [kiến trúc thành quách]{"entity":"X"} nào [được xây dựng bởi]{"entity":"predicate"} [An Dương Vương]{"entity":"object"}?
+    - [kiến trúc thành quách]{"entity":"class"} nào [được xây dựng vào]{"entity":"predicate"} [năm 1805]{"entity":"object"}?
+    - [kiến trúc thành quách]{"entity":"class"} nào [ở thời kỳ là]{"entity":"predicate"} [NgoDynasty]{"entity":"object"}?
+    - [kiến trúc thành quách]{"entity":"class"} nào [được chọn làm thủ đô bởi]{"entity":"predicate"} [Ngô Quyền]{"entity":"object"}?
+    - [kiến trúc thành quách]{"entity":"class"} nào [được xây dựng bởi]{"entity":"predicate"} [An Dương Vương]{"entity":"object"}?
 
 
 
 
 - intent: ask_citadel_architecture_2
   examples: |
-    - [kiến trúc thành quách]{"entity":"X"} nào ở thời kỳ là [NgoDynasty]{"entity":"object"} và được chọn làm thủ đô bởi [Ngô Quyền]{"entity":"object"} ?
-    - [kiến trúc thành quách]{"entity":"X"} nào ở thời kỳ là [NgoDynasty]{"entity":"object"} và được xây dựng bởi [An Dương Vương]{"entity":"object"} ?
-    - [kiến trúc thành quách]{"entity":"X"} nào được chọn làm thủ đô bởi [Ngô Quyền]{"entity":"object"} và ở thời kỳ là [NgoDynasty]{"entity":"object"} ?
-    - [kiến trúc thành quách]{"entity":"X"} nào được chọn làm thủ đô bởi [Ngô Quyền]{"entity":"object"} và được xây dựng bởi [An Dương Vương]{"entity":"object"} ?
-    - [kiến trúc thành quách]{"entity":"X"} nào được xây dựng bởi [An Dương Vương]{"entity":"object"} và ở thời kỳ là [NgoDynasty]{"entity":"object"} ?
-    - [kiến trúc thành quách]{"entity":"X"} nào được xây dựng bởi [An Dương Vương]{"entity":"object"} và được chọn làm thủ đô bởi [Ngô Quyền]{"entity":"object"} ?
+    - [kiến trúc thành quách]{"entity":"class"} nào ở thời kỳ là [NgoDynasty]{"entity":"object"} và được chọn làm thủ đô bởi [Ngô Quyền]{"entity":"object"} ?
+    - [kiến trúc thành quách]{"entity":"class"} nào ở thời kỳ là [NgoDynasty]{"entity":"object"} và được xây dựng bởi [An Dương Vương]{"entity":"object"} ?
+    - [kiến trúc thành quách]{"entity":"class"} nào được chọn làm thủ đô bởi [Ngô Quyền]{"entity":"object"} và ở thời kỳ là [NgoDynasty]{"entity":"object"} ?
+    - [kiến trúc thành quách]{"entity":"class"} nào được chọn làm thủ đô bởi [Ngô Quyền]{"entity":"object"} và được xây dựng bởi [An Dương Vương]{"entity":"object"} ?
+    - [kiến trúc thành quách]{"entity":"class"} nào được xây dựng bởi [An Dương Vương]{"entity":"object"} và ở thời kỳ là [NgoDynasty]{"entity":"object"} ?
+    - [kiến trúc thành quách]{"entity":"class"} nào được xây dựng bởi [An Dương Vương]{"entity":"object"} và được chọn làm thủ đô bởi [Ngô Quyền]{"entity":"object"} ?
 
 
 - intent: ask_cultural_historical_site
   examples: |
-    - [di tích lịch sử văn hóa]{"entity":"X"} nào [nằm trong]{"entity":"predicate"} [quần thể di tích Cố đô Huế]{"entity":"object"}?
-    - [nằm trong]{"entity":"predicate"} [quần thể di tích Cố đô Huế]{"entity":"object"} có [di tích lịch sử văn hóa]{"entity":"X"} nào?
+    - [di tích lịch sử văn hóa]{"entity":"class"} nào [nằm trong]{"entity":"predicate"} [quần thể di tích Cố đô Huế]{"entity":"object"}?
+    - [nằm trong]{"entity":"predicate"} [quần thể di tích Cố đô Huế]{"entity":"object"} có [di tích lịch sử văn hóa]{"entity":"class"} nào?
 
 - intent: ask_about_administrative_division
   examples: |
@@ -365,101 +366,98 @@ nlu:
 - intent: ask_about_festival
   examples: |
     - [Lễ hội Bạch Đằng]{"entity":"object"}  [được tổ chức]{"entity":"predicate"} ?
-    - [Lễ hội đền Cửa Ông]{"entity":"object"}  được tổ chức ?
+    - [Lễ hội đền Cửa Ông]{"entity":"object","value":"vntourism:Lễ_hội_đền_Cửa_Ông"}  được tổ chức ?
     - [Lễ hội Bạch Đằng]{"entity":"object"}  được tổ chức ?
-    - [Lễ hội đền Cửa Ông]{"entity":"object"}  tri ân ?
-    - [Lễ hội đền Cửa Ông]{"entity":"object"}  tưởng nhớ ?
-    - [Lễ hội đền Cửa Ông]{"entity":"object"}  kỷ niệm ?
-    - [Lễ hội đền Cửa Ông]{"entity":"object"}  bắt đầu vào ?
-    - [Lễ hội đền Cửa Ông]{"entity":"object"}  kết thúc vào ?
-    - [Lễ hội đền Cửa Ông]{"entity":"object"}  diễn ra vào ?
-    - [Hội Tịch Điền]{"entity":"object"} trở thành ngày [kỷ niệm]{"entity":"predicate"} vị vua nào xuống đồng đi cày?
-    - [Hội Tịch Điền]{"entity":"object"} [kỷ niệm]{"entity":"predicate"}?
-    - [Giỗ Tổ Hùng Vương]{"entity":"object"} [diễn ra]{"entity":"predicate"} vào ngày nào?
-    - [Lễ hội Đền Hùng]{"entity":"object","value":"Lễ_hội_Đền_Hùng"} được tổ chức ở đâu?
-    - [Lễ Hội Đền Hùng]{"entity":"object","value":"Lễ_hội_Đền_Hùng"} được tổ chức ở đâu?
-    - [Lễ hội Làng Vai]{"entity":"object"} được tổ chức ?
-    - [Hội làng Bồ Đề]{"entity":"object"} được tổ chức ?
-    - [Hội làng chài Vạn Vĩ]{"entity":"object"} được tổ chức ?
-    - [Lễ hội đình Giảng Võ]{"entity":"object"} được tổ chức ?
-    - [Lễ hội chùa Thánh Chúa]{"entity":"object"} được tổ chức ?
-    - [Hội đình Thanh Liệt]{"entity":"object"} được tổ chức ?
-    - [Hội Xuân núi Bà]{"entity":"object"} được tổ chức ?
-    - [Lễ hội Đình Thần Dương Đông]{"entity":"object"} được tổ chức ?
-    - [Lễ hội chùa Cổ Lễ]{"entity":"object"} được tổ chức ?
-    - [Lễ hội chùa Bút Tháp]{"entity":"object"} được tổ chức ?
-    - [Hội đình Gia Thuỵ]{"entity":"object"} được tổ chức ?
-    - [Hội chùa Đậu]{"entity":"object"} được tổ chức ?
-    - [Hội làng Xuân Nộn]{"entity":"object"} được tổ chức ?
-    - [Hội làng Yên Nội]{"entity":"object"} được tổ chức ?
-    - [Lễ hội văn miếu Mao Điền]{"entity":"object"} được tổ chức ?
-    - [Lễ hội đua thuyền Phú Quốc]{"entity":"object"} được tổ chức ?
-    - [Hội đình Thượng Lão]{"entity":"object"} được tổ chức ?
+    - [Lễ hội đền Cửa Ông]{"entity":"object","value":"vntourism:Lễ_hội_đền_Cửa_Ông"}  tri ân ?
+    - [Lễ hội đền Cửa Ông]{"entity":"object","value":"vntourism:Lễ_hội_đền_Cửa_Ông"}  tưởng nhớ ?
+    - [Lễ hội đền Cửa Ông]{"entity":"object","value":"vntourism:Lễ_hội_đền_Cửa_Ông"}  kỷ niệm ?
+    - [Lễ hội đền Cửa Ông]{"entity":"object","value":"vntourism:Lễ_hội_đền_Cửa_Ông"}  bắt đầu vào ?
+    - [Lễ hội đền Cửa Ông]{"entity":"object","value":"vntourism:Lễ_hội_đền_Cửa_Ông"}  kết thúc vào ?
+    - [Lễ hội đền Cửa Ông]{"entity":"object","value":"vntourism:Lễ_hội_đền_Cửa_Ông"}  diễn ra vào ?
+    - [Hội Tịch Điền]{"entity":"object","value":"vntourism:Hội_Tịch_Điền"} trở thành ngày [kỷ niệm]{"entity":"predicate"} vị vua nào xuống đồng đi cày?
+    - [Hội Tịch Điền]{"entity":"object","value":"vntourism:Hội_Tịch_Điền"} [kỷ niệm]{"entity":"predicate"}?
+    - [Giỗ Tổ Hùng Vương]{"entity":"object","value":"Vntourism:Giỗ_Tổ_Hùng_Vương"} [diễn ra]{"entity":"predicate"} vào ngày nào?
+    - [Lễ hội Đền Hùng]{"entity":"object","value":"vntourism:Lễ_hội_Đền_Hùng"} được tổ chức ở đâu?
+    - [Lễ Hội Đền Hùng]{"entity":"object","value":"vntourism:Lễ_hội_Đền_Hùng"} được tổ chức ở đâu?
+    - [Lễ hội Làng Vai]{"entity":"object","value":"vntourism:Lễ_hội_Làng_Vai"}  được tổ chức ?
+    - [Hội làng Bồ Đề]{"entity":"object","value":"vntourism:Hội_làng_Bồ_Đề"}  diễn ra vào ?
+    - [Hội làng chài Vạn Vĩ]{"entity":"object","value":"vntourism:Hội_làng_chài_Vạn_Vĩ"}  diễn ra vào ?
+    - [Lễ hội đình Giảng Võ]{"entity":"object","value":"vntourism:Lễ_hội_đình_Giảng_Võ"}  được tổ chức ?
+    - [Hội đình Thanh Liệt]{"entity":"object","value":"vntourism:Hội_đình_Thanh_Liệt"}  được tổ chức ?
+    - [Hội Xuân núi Bà]{"entity":"object","value":"vntourism:Hội_Xuân_núi_Bà"}  được tổ chức ?
+    - [Lễ hội chùa Cổ Lễ]{"entity":"object","value":"vntourism:Lễ_hội_chùa_Cổ_Lễ"}  được tổ chức ?
+    - [Lễ hội chùa Bút Tháp]{"entity":"object","value":"vntourism:Lễ_hội_chùa_Bút_Tháp"}  được tổ chức ?
+    - [Hội đình Gia Thuỵ]{"entity":"object","value":"vntourism:Hội_đình_Gia_Thuỵ"}  được tổ chức ?
+    - [Hội chùa Đậu]{"entity":"object","value":"vntourism:Hội_chùa_Đậu"}  diễn ra vào ?
+    - [Hội làng Xuân Nộn]{"entity":"object","value":"vntourism:Hội_làng_Xuân_Nộn"}  được tổ chức ?
+    - [Hội làng Yên Nội]{"entity":"object","value":"vntourism:Hội_làng_Yên_Nội"}  được tổ chức ?
+    - [Lễ hội văn miếu Mao Điền]{"entity":"object","value":"vntourism:Lễ_hội_văn_miếu_Mao_Điền"}  được tổ chức ?
+    - [Lễ hội đua thuyền Phú Quốc]{"entity":"object","value":"vntourism:Lễ_hội_đua_thuyền_Phú_Quốc"}  được tổ chức ?
+    - [Hội đình Thượng Lão]{"entity":"object","value":"vntourism:Hội_đình_Thượng_Lão"}  được tổ chức ?
     - [Hội làng Tó]{"entity":"object"} được tổ chức ?
     - [Hội Đồng Bằng]{"entity":"object"} được tổ chức ?
     - [Tết Hạ Nguyên]{"entity":"object"} diễn ra vào ?
     - [Hội làng Tó]{"entity":"object"} diễn ra vào ?
-    - [Hội vật Mai Động]{"entity":"object"} diễn ra vào ?
-    - [Hội Sài Đồng]{"entity":"object"} diễn ra vào ?
-    - [Hội đền Xuân Lai]{"entity":"object"} diễn ra vào ?
-    - [Hội làng Hà Hương]{"entity":"object"} diễn ra vào ?
-    - [Lễ hội chùa Hương]{"entity":"object"} diễn ra vào ?
+    - [Hội vật Mai Động]{"entity":"object","value":"vntourism:Hội_vật_Mai_Động"}  được tổ chức ?
+    - [Hội Sài Đồng]{"entity":"object","value":"vntourism:Hội_Sài_Đồng"}  diễn ra vào ?
+    - [Hội đền Xuân Lai]{"entity":"object","value":"vntourism:Hội_đền_Xuân_Lai"}  diễn ra vào ?
+    - [Hội làng Hà Hương]{"entity":"object","value":"vntourism:Hội_làng_Hà_Hương"}  diễn ra vào ?
+    - [Lễ hội chùa Hương]{"entity":"object","value":"vntourism:Lễ_hội_chùa_Hương"}  được tổ chức ?
     - [Hội năm làng Mọc]{"entity":"object"} diễn ra vào ?
-    - [Lễ hội đình La Dương]{"entity":"object"} diễn ra vào ?
+    - [Lễ hội đình La Dương]{"entity":"object","value":"vntourism:Lễ_hội_đình_La_Dương"}  diễn ra vào ?
     - [Hội thờ Thủy thần]{"entity":"object"} diễn ra vào ?
-    - [Lễ hội đình Phú Gia]{"entity":"object"} diễn ra vào ?
-    - [Lễ hội đình Giàn]{"entity":"object"} diễn ra vào ?
-    - [Hội miếu Vũ, Xuân Đỉnh]{"entity":"object"} diễn ra vào ?
-    - [Lễ hội Võng La]{"entity":"object"} diễn ra vào ?
+    - [Lễ hội đình Phú Gia]{"entity":"object","value":"vntourism:Lễ_hội_đình_Phú_Gia"}  diễn ra vào ?
+    - [Lễ hội đình Giàn]{"entity":"object","value":"vntourism:Lễ_hội_đình_Giàn"}  được tổ chức ?
+    - [Hội miếu Vũ, Xuân Đỉnh]{"entity":"object","value":"vntourism:Hội_miếu_Vũ,_Xuân_Đỉnh"}  được tổ chức ?
+    - [Lễ hội Võng La]{"entity":"object","value":"vntourism:Lễ_hội_Võng_La"}  được tổ chức ?
     - [Hội đình Văn Khê]{"entity":"object"} diễn ra vào ?
     - [Lễ hội Cổ Loa]{"entity":"object"} diễn ra vào ?
     - [Lễ hội Thập Tam Trại]{"entity":"object"} diễn ra vào ?
-    - [Hội Bất Nạo]{"entity":"object"} diễn ra vào ?
-    - [Hội cướp cầu Viên Nội]{"entity":"object"} diễn ra vào ?
-    - [Hội làng Động Phí]{"entity":"object"} diễn ra vào ?
+    - [Hội Bất Nạo]{"entity":"object","value":"vntourism:Hội_Bất_Nạo"}  diễn ra vào ?
+    - [Hội cướp cầu Viên Nội]{"entity":"object","value":"vntourism:Hội_cướp_cầu_Viên_Nội"}  được tổ chức ?
+    - [Hội làng Động Phí]{"entity":"object","value":"vntourism:Hội_làng_Động_Phí"}  được tổ chức ?
     - [Lễ hội chùa Vua]{"entity":"object"} diễn ra vào ?
     - [Hội chùa Bối Khê]{"entity":"object"} diễn ra vào ?
-    - [Tiễn Táo Quân về trời]{"entity":"object"} diễn ra vào ?
     - [Hội phủ Tây Hồ]{"entity":"object"} diễn ra vào ?
     - [Lễ hội đền Bạch Mã]{"entity":"object"} diễn ra vào ?
     - [Hội làng Cán Khê]{"entity":"object"} diễn ra vào ?
     - [Tết Trung Thu]{"entity":"object"} diễn ra vào ?
-    - [Hội chùa Tây Phương]{"entity":"object"} diễn ra vào ?
+    - [Hội chùa Tây Phương]{"entity":"object","value":"vntourism:Hội_chùa_Tây_Phương"}  được tổ chức ?
     - [Tết Trùng Cửu]{"entity":"object"} diễn ra vào ?
     - [Hội Đình Mai]{"entity":"object"} diễn ra vào ?
-    - [Lễ hội Đống Đa]{"entity":"object"} diễn ra vào ?
-    - [Hội đền Xuân Lai]{"entity":"object"} diễn ra vào?
-    - [Lễ hội Đống Đa]{"entity":"object"} tri ân?
-    - [Hội Gióng đền Sóc]{"entity":"object"} tưởng nhớ?
-    - [Lễ hội Cổ Loa]{"entity":"object"} kỷ niệm?
-    - [Hội đình Thượng Lão]{"entity":"object"} kỉ niệm?
-    - [Hội Sơn Thanh]{"entity":"object"} diễn ra vào?
-    - [Hội đình Kim Mã Hạ]{"entity":"object"} tổ chức tại?
-    - [Hội chợ Chuông]{"entity":"object"} tri ân?
-    - [Lễ hội làng Triều Khúc]{"entity":"object"} tổ chức tại?
-    - [Hội làng Tó]{"entity":"object"} tưởng nhớ?
-    - [Lễ hội đình Đông Phù]{"entity":"object"} kỷ niệm?
-    - [Lễ hội làng Bắc Biên]{"entity":"object"} kỉ niệm?
+    - [Lễ hội Đống Đa]{"entity":"object","value":"vntourism:Lễ_hội_Đống_Đa"} diễn ra vào ?
+    - [Hội đền Xuân Lai]{"entity":"object","value":"vntourism:Hội_đền_Xuân_Lai"} diễn ra vào?
+    - [Lễ hội Đống Đa]{"entity":"object","value":"vntourism:Lễ_hội_Đống_Đa"} tri ân?
+    - [Hội Gióng đền Sóc]{"entity":"object","value":"vntourism:Hội_Gióng_đền_Sóc"} tưởng nhớ?
+    - [Lễ hội Cổ Loa]{"entity":"object","value":"vntourism:Lễ_hội_Cổ_Loa"} kỷ niệm?
+    - [Hội đình Thượng Lão]{"entity":"object","value":"vntourism:Hội_đình_Thượng_Lão"} kỉ niệm?
+    - [Hội Sơn Thanh]{"entity":"object","value":"vntourism:Hội_Sơn_Thanh"} diễn ra vào?
+    - [Hội đình Kim Mã Hạ]{"entity":"object","value":"vntourism:Hội_đình_Kim_Mã_Hạ"} tổ chức tại?
+    - [Hội chợ Chuông]{"entity":"object","value":"vntourism:Hội_chợ_Chuông"} tri ân?
+    - [Lễ hội làng Triều Khúc]{"entity":"object","value":"vntourism:Lễ_hội_làng_Triều_Khúc"} tổ chức tại?
+    - [Hội làng Tó]{"entity":"object","value":"vntourism:Hội_làng_Tó"} tưởng nhớ?
+    - [Lễ hội đình Đông Phù]{"entity":"object","value":"vntourism:Lễ_hội_đình_Đông_Phù"} kỷ niệm?
+    - [Lễ hội làng Bắc Biên]{"entity":"object","value":"vntourism:Lễ_hội_làng_Bắc_Biên"} kỉ niệm?
 
 - intent: ask_about_natural_area
   examples: |
     - [Bãi biển Trà Cổ]{"entity":"object"}  nằm trong ?
     - [Bãi biển Trà Cổ]{"entity":"object"}  nằm ở đâu?
-    - [Hồ Gươm]{"entity":"object"}  nằm trong ?
-    - [Hồ Gươm]{"entity":"object"} ?
-    - [Hồ Tây]{"entity":"object"}  ở đâu ?
-    - [Hồ Tây]{"entity":"object"}  nằm tại ?
-    - [Vịnh Hạ Long]{"entity":"object"} ?
-    - [Vịnh Hạ Long]{"entity":"object"}  nằm trong ?
-    - [Núi Bài Thơ]{"entity":"object"}  nằm trong ?
-    - [Núi Bài Thơ]{"entity":"object"}   ?
+    - [Hồ Gươm]{"entity":"object","value":"Hồ Gươm"}  nằm trong ?
+    - [Hồ Gươm]{"entity":"object","value":"Hồ Gươm"} ?
+    - [Hồ Tây]{"entity":"object","value":"Hồ Tây"}  ở đâu ?
+    - [Hồ Tây]{"entity":"object","value":"Hồ Tây"}  nằm tại ?
+    - [Vịnh Hạ Long]{"entity":"object","value":"Vịnh Hạ Long"} ?
+    - [Vịnh Hạ Long]{"entity":"object","value":"Vịnh Hạ Long"}  nằm trong ?
+    - [Núi Bài Thơ]{"entity":"object","value":"Núi Bài Thơ"}  nằm trong ?
+    - [Núi Bài Thơ]{"entity":"object","value":"Núi Bài Thơ"}   ?
 
 - intent: ask_natural_area
   examples: |
-    - [khu vực thiên nhiên]{"entity":"X"} nào nằm trong [Quảng Ninh]{"entity":"object"}?
-    - [danh lam thắng cảnh]{"entity":"X"} nào nằm trong [Quảng Ninh]{"entity":"object"}?
-    - [khu vực thiên nhiên]{"entity":"X"} nào nằm trong [Hà Nội]{"entity":"object"}?
-    - [danh lam thắng cảnh]{"entity":"X"} nào nằm trong [Hà Nội]{"entity":"object"}?
+    - [khu vực thiên nhiên]{"entity":"class"} nào nằm trong [Quảng Ninh]{"entity":"object"}?
+    - [danh lam thắng cảnh]{"entity":"class"} nào nằm trong [Quảng Ninh]{"entity":"object"}?
+    - [khu vực thiên nhiên]{"entity":"class"} nào nằm trong [Hà Nội]{"entity":"object"}?
+    - [danh lam thắng cảnh]{"entity":"class"} nào nằm trong [Hà Nội]{"entity":"object"}?
     - Quảng Ninh có danh lam thắng cảnh gì?
     - Quảng Ninh có khu vực thiên nhiên nào đặc sắc?
     - Hà Nội có danh lam thắng cảnh gì?
@@ -477,19 +475,19 @@ nlu:
     - [Ngô Quyền]{"entity":"object"}  giữ chức vụ ?
     - [Ngô Quyền]{"entity":"object"}  có người kế vị là ?
     - [Ngô Quyền]{"entity":"object"}  sinh tại ?
-    - [Trần Anh Tông]{"entity":"object"} sinh vào ?
-    - [Trần Nhân Tông]{"entity":"object"}  có [liên quan]{"entity":"predicate"} ?
-    - [Lê Lợi]{"entity":"object"}  có [liên quan]{"entity":"predicate"} ?
+    - [Trần Anh Tông]{"entity":"object","value":"vntourism:Trần_Anh_Tông"} sinh vào ?
+    - [Trần Nhân Tông]{"entity":"object","value":"vntourism:Trần_Nhân_Tông"}  có [liên quan]{"entity":"predicate"} ?
+    - [Lê Lợi]{"entity":"object","value":"vntourism:Lê_Lợi"}  có [liên quan]{"entity":"predicate"} ?
     - [Ngô Xương Văn]{"entity":"object"}  mất vào ?
     - [Lê Dụ Tông]{"entity":"object"}  mất vào ?
     - [Nguyễn Hoàng]{"entity":"object"}  mất vào ?
     - [Đinh Tiên Hoàng]{"entity":"object"}  mất vào ?
-    - [Trần Hưng Đạo]{"entity":"object"}  mất vào ?
-    - [Trần Thái Tông]{"entity":"object"}  sinh vào ?
-    - [Hồ Chí Minh]{"entity":"object"}  mất vào ?
+    - [Trần Hưng Đạo]{"entity":"object","value":"vntourism:Trần_Hưng_Đạo"}  mất vào ?
+    - [Trần Thái Tông]{"entity":"object","value":"vntourism:Trần_Thái_Tông"}  sinh vào ?
+    - [Hồ Chí Minh]{"entity":"object","value":"vntourism:Hồ_Chí_Minh"}  mất vào ?
     - [Võ Chí Công]{"entity":"object"}  mất vào ?
-    - [Trần Nhân Tông]{"entity":"object"}  có người kế vị là ?
-    - [Trần Nhân Tông]{"entity":"object"} có nơi [an nghỉ]{"entity":"predicate"} là?
+    - [Trần Nhân Tông]{"entity":"object","value":"vntourism:Trần_Nhân_Tông"}  có người kế vị là ?
+    - [Trần Nhân Tông]{"entity":"object","value":"vntourism:Trần_Nhân_Tông"} có nơi [an nghỉ]{"entity":"predicate"} là?
     - [Thánh Gióng]{"entity":"object"} có liên quan đến ?
     - [Quang Trung]{"entity":"object"} tham gia?
     - [Lý Nam Đế]{"entity":"object"} là ai?
@@ -498,8 +496,8 @@ nlu:
     - [Phùng Hưng]{"entity":"object"} có người kế vị là?
     - [Lê Hoàn]{"entity":"object"} có vợ là ?
     - [Nguyễn Siêu]{"entity":"object"} có con là?
-    - [Trần Nguyễn Trác]{"entity":"object"} có cha là?
-    - [Lý Châu Nương]{"entity":"object"} có mẹ là?
+    - [Trần Nguyễn Trác]{"entity":"object"} có [cha]{"entity":"predicate","value":"cha"} là?
+    - [Lý Châu Nương]{"entity":"object"} có [mẹ]{"entity":"predicate","value":"mẹ"} là?
     - [Lý Thường Kiệt]{"entity":"object"} sinh tại?
     - [Nguyên Phi Ỷ Lan]{"entity":"object"} có cha mẹ là?
     - [Thánh Gióng]{"entity":"object"}
@@ -514,22 +512,26 @@ nlu:
 
 - intent: ask_den_chua
   examples: |
-    - [chùa]{"entity":"X"} nào nằm trong [Quảng Ninh]{"entity":"object"}?
-    - [chùa]{"entity":"X"} nào ở [Quảng Ninh]{"entity":"object"}?
-    - [chùa]{"entity":"X"} nào tại [Hà Nội]{"entity":"object"}?
-    - [đền]{"entity":"X"} nào nằm trong [Quảng Ninh]{"entity":"object"}?
-    - [Nam Định]{"entity":"object"} có [đền]{"entity":"X"} nào ?
+    - [chùa]{"entity":"class"} nào nằm trong [Quảng Ninh]{"entity":"object"}?
+    - [chùa]{"entity":"class"} nào ở [Quảng Ninh]{"entity":"object"}?
+    - [chùa]{"entity":"class"} nào tại [Hà Nội]{"entity":"object"}?
+    - [đền]{"entity":"class"} nào nằm trong [Quảng Ninh]{"entity":"object"}?
+    - [Nam Định]{"entity":"object"} có [đền]{"entity":"class"} nào ?
     - Tỉnh Quảng Ninh có những đền chùa nào?
     - [Hà Nội]{"entity":"object"} có những đền chùa nào?
 
 - intent: ask_about_den_chua
   examples: |
-    - [Chùa Cái Bầu]{"entity":"object"}  nằm trong ?
-    - [Chùa Yên Tử]{"entity":"object"}  nằm ở ?
-    - [Chùa Hà]{"entity":"object"}  nằm tại ?
-    - [Chùa Ba Vàng]{"entity":"object"}  ở đâu ?
-    - [Đền Cửa Ông]{"entity":"object"}  ở ?
-    - [Đền Trần]{"entity":"object"}  nằm trong ?
+    - [Chùa Cái Bầu]{"entity":"object","value":"vntourism:Chùa_Cái_Bầu"}  nằm trong ?
+    - [Chùa Hà]{"entity":"object","value":"vntourism:Chùa_Hà"}  nằm ở ?
+    - [Chùa Hương]{"entity":"object","value":"vntourism:Chùa_Hương"}  ở ?
+    - [Yên Tử]{"entity":"object","value":"vntourism:Yên_Tử"}  nằm ở đâu ?
+    - [Chùa Bái Đính]{"entity":"object","value":"vntourism:Chùa_Bái_Đính"}  nằm trong đâu ?
+    - [Chùa Ba Vàng]{"entity":"object","value":"vntourism:Chùa_Ba_Vàng"}  ở đâu ?
+    - [Đền Cửa Ông]{"entity":"object","value":"vntourism:Đền_Cửa_Ông"}  nằm trong ?
+    - [Đền Trần]{"entity":"object","value":"vntourism:Đền_Trần"}  nằm ở ?
+
+
 
 - intent: hoi_an
   examples: |
@@ -570,9 +572,9 @@ nlu:
     - Giới thiệu về Hồ Gươm?
     - Cho tôi biết về Hà Nội?
     - Có gì hay ở Quảng Ninh?
-    - Giới thiệu về [Trần Nhân Tông]{"entity":"object"}?
+    - Giới thiệu về [Trần Nhân Tông]{"entity":"object","value":"vntourism:Trần_Nhân_Tông"}?
     - Giới thiệu Hà Nội?
-    - Giới thiệu  [Lê Lợi]{"entity":"object"}?
+    - Giới thiệu  [Lê Lợi]{"entity":"object","value":"vntourism:Lê_Lợi"}?
 
     
  
@@ -585,14 +587,14 @@ nlu:
 - intent: diem_du_lich
   examples: |
     - Những địa điểm vui chơi hấp dẫn nhất tại Quảng Ninh?
-    - Địa điểm vui chơi ở [Hà Nội]{"entity":"object"}?
-    - Các điểm đến hấp dẫn ở [Hà Giang]{"entity":"object"}?
-    - Danh lam thắng cảnh nổi tiếng ở [Ninh Bình]{"entity":"object"}?
+    - Địa điểm vui chơi ở [Hà Nội]{"entity":"object","value":"Hà Nội"}?
+    - Các điểm đến hấp dẫn ở [Hà Giang]{"entity":"object","value":"Hà Giang"}?
+    - Danh lam thắng cảnh nổi tiếng ở [Ninh Bình]{"entity":"object","value":"Ninh Bình"}?
     - Danh lam thắng cảnh Quảng Ninh?
 
 - intent: relate
   examples: |
-    - Vị vua nào của Việt Nam đã chọn núi [Yên Tử]{"entity":"object"} để tu hành? 
-    - Vị vua nào trả thanh kiếm cho rùa thần ở [Hồ Gươm]{"entity":"object"}?
-    - Vị vua nào [liên quan]{"entity":"predicate"} [Hồ Gươm]{"entity":"object"}?
+    - Vị vua nào của Việt Nam đã chọn núi [Yên Tử]{"entity":"object","value":"Yên Tử"} để tu hành? 
+    - Vị vua nào trả thanh kiếm cho rùa thần ở [Hồ Gươm]{"entity":"object","value":"Hồ Gươm"}?
+    - Vị vua nào [liên quan]{"entity":"predicate"} [Hồ Gươm]{"entity":"object","value":"Hồ Gươm"}?
 

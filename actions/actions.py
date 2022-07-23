@@ -15,7 +15,7 @@ class ActionOneCondition(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         try:
-            input_data1 = next(tracker.get_latest_entity_values("X"), ".")
+            input_data1 = next(tracker.get_latest_entity_values("class"), ".")
             input_data2 = next(tracker.get_latest_entity_values("predicate"), ".")
             input_data3 = next(tracker.get_latest_entity_values("object"), None)
             print(input_data3)
@@ -39,7 +39,7 @@ class ActionTwoConditions(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         try:
-            input_data1 = next(tracker.get_latest_entity_values("X"), ".")
+            input_data1 = next(tracker.get_latest_entity_values("class"), ".")
             iterator1 = tracker.get_latest_entity_values("predicate")
             iterator2 = tracker.get_latest_entity_values("object")
             input_data2 = next(iterator1,".")
