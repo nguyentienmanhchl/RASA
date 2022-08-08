@@ -3,11 +3,22 @@
 
 Tải thư viện Rasa:
 
+Lệnh tải phiên bản mới nhất:
+
 pip install rasa
 
+Lệnh tải phiên bản cụ thể:
+
+pip3 install rasa==3.1
+
+Hệ thống dùng Rasa phiên bản như sau:
+
+Rasa Version      :         3.1.0
+Minimum Compatible Version: 3.0.0
+Rasa SDK Version  :         3.1.1
+Python Version    :         3.8.12
 
 ****
-
 
 Huấn luyện chatbot:
 
