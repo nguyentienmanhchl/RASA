@@ -77,4 +77,8 @@ File actions.py ở thư mục action là nơi cài đặt actions tùy chỉnh
 
 ****
 
+<<<<<<< HEAD
 Chi tiết thêm về Rasa xem tại https://rasa.com/
+=======
+Chi tiết thêm về Rasa xem tại https://rasa.com/
+>>>>>>> eb1567698c6c0a46c200b64716c99a79260749a9
