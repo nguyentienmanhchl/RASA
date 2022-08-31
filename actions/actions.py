@@ -24,7 +24,9 @@ class ActionOneCondition(Action):
             input_data4 = next(tracker.get_latest_entity_values("time"),".")
             # if input_data4 != ".":
             #     print(parser.parse(input_data4).month)
-            input_data = input_data1 + "~"+ input_data2 +"~"+input_data3+"~"+input_data4
+            question = tracker.latest_message['text']
+            intent = tracker.get_intent_of_latest_message()
+            input_data = input_data1 + "~"+ input_data2 +"~"+input_data3+"~"+input_data4+"~"+question+"~"+intent
             print(input_data)
             r = requests.get("http://localhost:8080/one_condition",data=input_data.encode('utf-8'))
        
@@ -50,7 +52,9 @@ class ActionTwoConditions(Action):
             input_data4 = next(iterator1,".")
             input_data5 = next(iterator2,"x")       
             #print(input_data3)
-            input_data = input_data1 + "~"+ input_data2 +"~"+input_data3+"~"+input_data4+"~"+input_data5
+            question = tracker.latest_message['text']
+            intent = tracker.get_intent_of_latest_message()
+            input_data = input_data1 + "~"+ input_data2 +"~"+input_data3+"~"+input_data4+"~"+input_data5+"~"+question+"~"+intent
             print(input_data)
             r = requests.get("http://localhost:8080/two_conditions",data=input_data.encode('utf-8'))
        
@@ -79,7 +83,9 @@ class ActionAskOneProperty(Action):
                 input_data3 = next(iterator,"x")
             else:
                 input_data3 = "x"
-            input_data = input_data1 + "~"+ input_data2 +"~" +input_data3 
+            question = tracker.latest_message['text']       
+            intent = tracker.get_intent_of_latest_message()
+            input_data = input_data1 + "~"+ input_data2 +"~" +input_data3 +"~"+question+"~"+intent
             print(input_data)   
             r = requests.get("http://localhost:8080/ask_one_property",data=input_data.encode('utf-8'))
        
@@ -105,7 +111,10 @@ class ActionAskAll(Action):
                 input_data2 = next(iterator,"x")
             else:
                 input_data2 = "x"
-            input_data = input_data1+"~"+input_data2
+            question = tracker.latest_message['text']
+            intent = tracker.get_intent_of_latest_message()
+
+            input_data = input_data1+"~"+input_data2+"~"+question+"~"+intent
             print(input_data)         
             r = requests.get("http://localhost:8080/all",data=input_data.encode('utf-8'))       
             dispatcher.utter_message(
@@ -126,7 +135,9 @@ class ActionAskDenChua(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         try:
-            input_data = next(tracker.get_latest_entity_values("object"),"x") 
+            question = tracker.latest_message['text']
+            intent = tracker.get_intent_of_latest_message()
+            input_data = next(tracker.get_latest_entity_values("object"),"x") +"~"+question+"~"+intent
             print(input_data)          
             r = requests.get("http://localhost:8080/ask_den_chua",data=input_data.encode('utf-8'))       
             dispatcher.utter_message(
@@ -152,7 +163,9 @@ class ActionAskAboutArea(Action):
             else:
                 input_data2 = "x"
             input_data3 = next(tracker.get_latest_entity_values("predicate"),".")
-            input_data = input_data1+"~"+input_data2+"~"+input_data3 
+            question = tracker.latest_message['text']
+            intent = tracker.get_intent_of_latest_message()
+            input_data = input_data1+"~"+input_data2+"~"+input_data3 +"~"+question+"~"+intent
             print(input_data)        
             r = requests.get("http://localhost:8080/ask_about_area",data=input_data.encode('utf-8'))       
             dispatcher.utter_message(
@@ -171,7 +184,9 @@ class ActionAskArea(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         try:
-            input_data = next(tracker.get_latest_entity_values("object"), "x")
+            question = tracker.latest_message['text']
+            intent = tracker.get_intent_of_latest_message()
+            input_data = next(tracker.get_latest_entity_values("object"), "x")+"~"+question+"~"+intent
             print(input_data)          
             r = requests.get("http://localhost:8080/ask_area",data=input_data.encode('utf-8'))       
             dispatcher.utter_message(
@@ -192,7 +207,9 @@ class ActionAskRelate(Action):
         try:
             input_data1 = next(tracker.get_latest_entity_values("object"), "x")      
             input_data2 = next(tracker.get_latest_entity_values("class"),".")  
-            input_data = input_data1+"~"+input_data2   
+            question = tracker.latest_message['text']
+            intent = tracker.get_intent_of_latest_message()
+            input_data = input_data1+"~"+input_data2   +"~"+question+"~"+intent
             print(input_data)
             r = requests.get("http://localhost:8080/ask_relate",data=input_data.encode('utf-8'))       
             dispatcher.utter_message(

@@ -10,78 +10,78 @@ rules:
 
 - rule: ask festival
   steps:
-  - intent: ask_festival
+  - intent: Festival_question
   - action: action_one_condition
 
 - rule: ask person
   steps:
-  - intent: ask_person
+  - intent: Person_question
   - action: action_one_condition
 
 - rule: ask administrative division
   steps:
-  - intent: ask_administrative_division
+  - intent: AdministrativeDivision_question
   - action: action_one_condition
 
 - rule: ask archaeological historical site
   steps:
-  - intent: ask_archaeological_historical_site
+  - intent: ArchaeologicalHistoricalSite_question
   - action: action_one_condition
 
 - rule: ask citadel architecture
   steps:
-  - intent: ask_citadel_architecture
+  - intent: CitadelArchitecture_question
   - action: action_one_condition
 
 - rule: ask cultural historical site
   steps:
-  - intent: ask_cultural_historical_site
+  - intent: CulturalHistoricalSite_question
   - action: action_one_condition
 
 - rule: ask festival 2
   steps:
-  - intent: ask_festival_2
+  - intent: Festival_question2
   - action: action_two_conditions
 
 - rule: ask person 2
   steps:
-  - intent: ask_person_2
+  - intent: Person_question2
   - action: action_two_conditions
 
 - rule: ask citadel architecture 2
   steps:
-  - intent: ask_citadel_architecture_2
+  - intent: CitadelArchitecture_question2
   - action: action_two_conditions
 
   
 - rule: ask about administrative division
   steps:
-  - intent: ask_about_administrative_division
+  - intent: about_AdministrativeDivision_question
   - action: action_ask_one_property
 
 - rule: ask about archaeological historical site
   steps:
-  - intent: ask_about_archaeological_historical_site
+  - intent: about_ArchaeologicalHistoricalSite_question
   - action: action_ask_one_property
 
 - rule: ask about citadel architecture
   steps:
-  - intent: ask_about_citadel_architecture
+  - intent: about_CitadelArchitecture_question
   - action: action_ask_one_property
 
 - rule: ask about cultural historical site
   steps:
-  - intent: ask_about_cultural_historical_site
+  - intent: about_CulturalHistoricalSite_question
   - action: action_ask_one_property
 
 - rule: ask about festival
   steps:
-  - intent: ask_about_festival
+  - intent: about_Festival_question
   - action: action_ask_one_property
 
 - rule: ask_about_person
   steps:
-  - intent: ask_about_person
+  - intent: about_Person_question
   - action: action_ask_one_property
 
 - rule: Ask the user to rephrase whenever they send a message with low NLU confidence
@@ -89,24 +89,35 @@ rules:
   - intent: nlu_fallback
   - action: utter_please_rephrase
 
-- rule: ask_den_chua
+- rule: ask_den
   steps:
-  - intent: ask_den_chua
+  - intent: Temple_question
   - action: action_ask_den_chua
 
-- rule: ask_about_den_chua
+- rule: ask_about_den
   steps: 
-  - intent: ask_about_den_chua
+  - intent: about_Temple_question
+  - action: action_ask_about_area
+
+
+- rule: ask_chua
+  steps:
+  - intent: BuddhistTemple_question
+  - action: action_ask_den_chua
+
+- rule: ask_about_chua
+  steps: 
+  - intent: about_BuddhistTemple_question
   - action: action_ask_about_area
 
 - rule: ask_natural_area
   steps:
-  - intent: ask_natural_area
+  - intent: NaturalArea_question
   - action: action_ask_area
 
 - rule: ask_about_natural_area
   steps:
-  - intent: ask_about_natural_area
+  - intent: about_NaturalArea_question
   - action: action_ask_about_area
 
 - rule: all

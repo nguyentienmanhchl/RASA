@@ -195,7 +195,7 @@ nlu:
 
 
 
-- intent: ask_person
+- intent: Person_question
   examples: |
     - con [người]{"entity":"class","value":"vntourism:Person"} nào [mất vào]{"entity":"predicate","value":"vntourism:hasDied"} [23-7-907]{"entity":"object"}?
     - [người]{"entity":"class","value":"vntourism:Person"} nào [sinh vào]{"entity":"predicate","value":"vntourism:hasBorn"} [830]{"entity":"object"}?
@@ -207,7 +207,7 @@ nlu:
     - [anh hùng]{"entity":"class","value":"vntourism:Person"} nào sinh tại Huế?
     - vị [anh hùng]{"entity":"class","value":"vntourism:Person"} nào ở thời kỳ nhà Ngô?
 
-- intent: ask_person_2
+- intent: Person_question2
   examples: |
     - [ai]{"entity":"class","value":"vntourism:Person"} nào mất vào [23-7-907]{"entity":"object"} và sinh vào [830]{"entity":"object"} ?
     - [người]{"entity":"class","value":"vntourism:Person"} nào sinh vào [830]{"entity":"object"} và mất vào [23-7-907]{"entity":"object"} ?
@@ -219,7 +219,7 @@ nlu:
     - [người]{"entity":"class","value":"vntourism:Person"} nào có người kế vị là [Dương Bình Vương]{"entity":"object","value":"vntourism:Dương_Bình_Vương"} và giữ chức vụ [King Ngô Quyền]{"entity":"object"} ?
 
 
-- intent: ask_festival
+- intent: Festival_question
   examples: |
     - [lễ hội]{"entity":"class","value":"vntourism:Festival"} nào [được tổ chức]{"entity":"predicate","value":"vntourism:isHeldAt"} tại [Quảng Ninh]{"entity":"object","value":"vntourism:Quảng_Ninh"}?
     - lễ hội nào [diễn ra vào]{"entity":"predicate","value":"vntourism:hasTimeHappen"} [tháng 2 Âm lịch]{"entity":"object"}?
@@ -284,7 +284,7 @@ nlu:
 
 
 
-- intent: ask_festival_2
+- intent: Festival_question2
   examples: |
     - [lễ hội]{"entity":"class","value":"vntourism:Festival"} nào diễn ra vào [tháng 2 Âm lịch]{"entity":"object"} và bắt đầu vào [3/2 Âm lịch]{"entity":"object"} ?
     - [lễ hội]{"entity":"class","value":"vntourism:Festival"} nào diễn ra vào [tháng 2 Âm lịch]{"entity":"object"} và kết thúc vào [cuối tháng 3 Âm lịch]{"entity":"object"} ?
@@ -308,18 +308,18 @@ nlu:
     - lễ hội nào kỷ niệm [Trần Quốc Tảng]{"entity":"object","value":"vntourism:Trần_Quốc_Tảng"} và tri ân [Trần Quốc Tảng]{"entity":"object","value":"vntourism:Trần_Quốc_Tảng"} ?
     - lễ hội nào kỷ niệm [Trần Quốc Tảng]{"entity":"object","value":"vntourism:Trần_Quốc_Tảng"} và tưởng nhớ [Trần Quốc Tảng]{"entity":"object","value":"vntourism:Trần_Quốc_Tảng"} ?
     - lễ hội nào kỷ niệm [Trần Quốc Tảng]{"entity":"object","value":"vntourism:Trần_Quốc_Tảng"} và bắt đầu vào [3/2 Âm lịch]{"entity":"object"} ?    
-- intent: ask_administrative_division
+- intent: AdministrativeDivision_question
   examples: |
     - [đơn vị hành chính]{"entity":"class","value":"vntourism:AdministrativeDivision"} nào [nằm trong]{"entity":"predicate","value":"vntourism:isApartOf"} [Thanh Hóa]{"entity":"object","value":"vntourism:Thanh_Hóa"}?
     - [đơn vị hành chính]{"entity":"class","value":"vntourism:AdministrativeDivision"} gì [nằm trong]{"entity":"predicate","value":"vntourism:isApartOf"} tỉnh [Thanh Hóa]{"entity":"object","value":"vntourism:Thanh_Hóa"}
 
-- intent: ask_archaeological_historical_site
+- intent: ArchaeologicalHistoricalSite_question
   examples: |
     - [di tích khảo cổ]{"entity":"class","value":"vntourism:ArchaeologicalHistoricalSite"} nào [có niên đại]{"entity":"predicate","value":"vntourism:hasChronology"} [3000 năm]{"entity":"object"}?
     - Tìm [di tích khảo cổ]{"entity":"class","value":"vntourism:ArchaeologicalHistoricalSite"} [có niên đại]{"entity":"predicate","value":"vntourism:hasChronology"} [3000 năm]{"entity":"object"}?
 
 
-- intent: ask_citadel_architecture
+- intent: CitadelArchitecture_question
   examples: |
     - [kiến trúc thành quách]{"entity":"class","value":"vntourism:CitadelArchitecture"} nào [được xây dựng vào]{"entity":"predicate","value":"vntourism:wasBuiltIn"} [năm 1805]{"entity":"object"}?
     - [kiến trúc thành quách]{"entity":"class","value":"vntourism:CitadelArchitecture"} nào [ở thời kỳ]{"entity":"predicate"} [nhà Ngô]{"entity":"object","value":"vntourism:NgoDynasty"}?
@@ -329,7 +329,7 @@ nlu:
 
 
 
-- intent: ask_citadel_architecture_2
+- intent: CitadelArchitecture_question2
   examples: |
     - [kiến trúc thành quách]{"entity":"class"} nào ở thời kỳ [nhà Ngô]{"entity":"object"} và được chọn làm thủ đô bởi [Ngô Quyền]{"entity":"object"} ?
     - [kiến trúc thành quách]{"entity":"class"} nào ở thời kỳ [nhà Ngô]{"entity":"object"} và được xây dựng bởi [An Dương Vương]{"entity":"object"} ?
@@ -339,22 +339,22 @@ nlu:
     - [kiến trúc thành quách]{"entity":"class"} nào được xây dựng bởi [An Dương Vương]{"entity":"object"} và được chọn làm thủ đô bởi [Ngô Quyền]{"entity":"object"} ?
 
 
-- intent: ask_cultural_historical_site
+- intent: CulturalHistoricalSite_question
   examples: |
     - [di tích lịch sử văn hóa]{"entity":"class","value":"vntourism:CulturalHistoricalSite"} nào [nằm trong]{"entity":"predicate"} [quần thể di tích Cố đô Huế]{"entity":"object","value":"vntourism:quần_thể_di_tích_Cố_đô_Huế"}?
     - [nằm trong]{"entity":"predicate"} [quần thể di tích Cố đô Huế]{"entity":"object"} có [di tích lịch sử văn hóa]{"entity":"class","value":"vntourism:CulturalHistoricalSite"} nào?
 
-- intent: ask_about_administrative_division
+- intent: about_AdministrativeDivision_question
   examples: |
     - [Ái Châu]{"entity":"object","value":"vntourism:Ái_Châu"}  nằm trong ?
     - [Ái Châu]{"entity":"object"}  nằm trong nơi nào?
 
-- intent: ask_about_archaeological_historical_site
+- intent: about_ArchaeologicalHistoricalSite_question
   examples: |
     - [Đàn đá Bình Đa]{"entity":"object","value":"vntourism:Đàn_đá_Bình_Đa"}  có niên đại ?
     - [Đàn đá Bình Đa]{"entity":"object"}  có niên đại bao lâu?
 
-- intent: ask_about_citadel_architecture
+- intent: about_CitadelArchitecture_question
   examples: |
     - [Kinh thành Huế]{"entity":"object","value":"vntourism:Kinh_thành_Huế"}  được xây dựng vào ?
     - Kinh thành Huế được xây dựng vào giai đoạn nào? 
@@ -362,12 +362,12 @@ nlu:
     - [Cổ Loa Citadel]{"entity":"object"}  được chọn làm thủ đô bởi ?
     - [Cổ Loa Citadel]{"entity":"object"}  được xây dựng bởi ?
 
-- intent: ask_about_cultural_historical_site
+- intent: about_CulturalHistoricalSite_question
   examples: |
     - [Điện Long An]{"entity":"object"}  nằm trong ?
     - [Điện Long An]{"entity":"object"}  nằm trong nơi nào?
 
-- intent: ask_about_festival
+- intent: about_Festival_question
   examples: |
     - [Lễ hội Bạch Đằng]{"entity":"object"}  [được tổ chức]{"entity":"predicate"} ?
     - [Lễ hội đền Cửa Ông]{"entity":"object","value":"vntourism:Lễ_hội_đền_Cửa_Ông"}  được tổ chức ?
@@ -443,7 +443,7 @@ nlu:
     - [Lễ hội đình Đông Phù]{"entity":"object","value":"vntourism:Lễ_hội_đình_Đông_Phù"} kỷ niệm?
     - [Lễ hội làng Bắc Biên]{"entity":"object","value":"vntourism:Lễ_hội_làng_Bắc_Biên"} kỉ niệm?
 
-- intent: ask_about_natural_area
+- intent: about_NaturalArea_question
   examples: |
     - [Bãi biển Trà Cổ]{"entity":"object","value":"vntourism:Bãi_biển_Trà_Cổ"}  nằm trong ?
     - [Bãi biển Trà Cổ]{"entity":"object","value":"vntourism:Bãi_biển_Trà_Cổ"}  nằm ở đâu?
@@ -460,7 +460,7 @@ nlu:
     - [Hang Sơn Đoòng]{"entity":"object","value":"vntourism:Hang_Sơn_Đoòng"} có chiều rộng?
     - [Sa Pa]{"entity":"object","value":"vntourism:Sa_Pa"} ở đâu?
     - [Đà Lạt]{"entity":"object","value":"vntourism:Đà_Lạt"} ở đâu?
-- intent: ask_natural_area
+- intent: NaturalArea_question
   examples: |
     - [khu vực thiên nhiên]{"entity":"class"} nào nằm trong [Quảng Ninh]{"entity":"object","value":"vntourism:Quảng_Ninh"}?
     - [danh lam thắng cảnh]{"entity":"class"} nào nằm trong [Quảng Ninh]{"entity":"object","value":"vntourism:Quảng_Ninh"}?
@@ -478,7 +478,7 @@ nlu:
 
 
 
-- intent: ask_about_person
+- intent: about_Person_question
   examples: |
     - [Nguyễn Trãi]{"entity":"object","value":"vntourism:Nguyễn_Trãi"} làm quan [dưới triều đại]{"entity":"predicate","value":"vntourism:hasPeriod"} nào?
     - [Khúc Thừa Dụ]{"entity":"object","value":"vntourism:Khúc_Thừa_Dụ"}  mất vào ?
@@ -519,31 +519,32 @@ nlu:
     - Lê Lợi tham gia trận đánh nào?
 
 
-
-
-
-
-
-- intent: ask_den_chua
+- intent: BuddhistTemple_question
   examples: |
     - [chùa]{"entity":"class"} nào nằm trong [Quảng Ninh]{"entity":"object"}?
     - [chùa]{"entity":"class"} nào ở [Quảng Ninh]{"entity":"object"}?
-    - [chùa]{"entity":"class"} nào tại [Hà Nội]{"entity":"object"}?
-    - [đền]{"entity":"class"} nào nằm trong [Quảng Ninh]{"entity":"object"}?
-    - [Nam Định]{"entity":"object"} có [đền]{"entity":"class"} nào ?
-    - Tỉnh Quảng Ninh có những đền chùa nào?
-    - [Hà Nội]{"entity":"object"} có những đền chùa nào?
-    - Đền thờ nào lâu đời nhất ở [Miền Bắc]{"entity":"object","value":"vntourism:Northern"}?
-    - Đền thờ nào ở Miền Bắc?
-
-- intent: ask_about_den_chua
+    - [chùa]{"entity":"class"} nào tại [Hà Nội]{"entity":"object"}?  
+    - [Chùa Bái Đính]{"entity":"object","value":"vntourism:Chùa_Bái_Đính"}  nằm trong đâu ?
+    - [Chùa Ba Vàng]{"entity":"object","value":"vntourism:Chùa_Ba_Vàng"}  ở đâu ?
+    
+- intent: about_BuddhistTemple_question
   examples: |
     - [Chùa Cái Bầu]{"entity":"object","value":"vntourism:Chùa_Cái_Bầu"}  nằm trong ?
     - [Chùa Hà]{"entity":"object","value":"vntourism:Chùa_Hà"}  nằm ở ?
     - [Chùa Hương]{"entity":"object","value":"vntourism:Chùa_Hương"}  ở ?
-    - [Yên Tử]{"entity":"object","value":"vntourism:Yên_Tử"}  nằm ở đâu ?
-    - [Chùa Bái Đính]{"entity":"object","value":"vntourism:Chùa_Bái_Đính"}  nằm trong đâu ?
-    - [Chùa Ba Vàng]{"entity":"object","value":"vntourism:Chùa_Ba_Vàng"}  ở đâu ?
+    - Chùa [Yên Tử]{"entity":"object","value":"vntourism:Yên_Tử"}  nằm ở đâu ?
+
+- intent: Temple_question
+  examples: |
+    - [đền]{"entity":"class"} nào nằm trong [Quảng Ninh]{"entity":"object"}?
+    - [Nam Định]{"entity":"object"} có [đền]{"entity":"class"} nào ?
+    - Tỉnh Quảng Ninh có những đền nào?
+    - [Hà Nội]{"entity":"object"} có những đền nào?
+    - Đền thờ nào lâu đời nhất ở [Miền Bắc]{"entity":"object","value":"vntourism:Northern"}?
+    - Đền thờ nào ở Miền Bắc?
+
+- intent: about_Temple_question
+  examples: |
     - [Đền Cửa Ông]{"entity":"object","value":"vntourism:Đền_Cửa_Ông"}  nằm trong ?
     - [Đền Trần]{"entity":"object","value":"vntourism:Đền_Trần"}  nằm ở ?
     - [Đền Cửa Ông]{"entity":"object","value":"vntourism:Đền_Cửa_Ông"} [thờ]{"entity":"predicate","value":"vntourism:worship"} ai?
